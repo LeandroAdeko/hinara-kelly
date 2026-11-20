@@ -2,87 +2,91 @@
 // public/fotos/ e preencha o campo `src` (ex.: '/fotos/retrato.jpg').
 
 export const perfil = {
-  nome: ['HINARA', 'KELLY'],
-  nomeCompleto: 'Hinara Kelly do Carmo',
-  cargo: 'comunicadora & produtora audiovisual;',
-  origem: 'cria de Cajazeiras — Salvador, Bahia;',
-  frase: { antes: '“Quando não existe oportunidade, ', destaque: 'eu crio.', depois: ' É transformando ideias em realidade que eu me sinto viva.”' },
+  nome: ['HINARA', 'DO CARMO'],
+  nomeCompleto: 'Hinara do Carmo',
   email: 'hinarakelly@gmail.com',
   instagram: 'hinarakelly',
   linkedin: '', // preencher com a URL do LinkedIn
   cidade: 'Salvador, Bahia — Brasil',
 }
 
-export const navegacao = [
-  { id: 'sobre', label: 'sobre' },
-  { id: 'trajetoria', label: 'trajetória' },
-  { id: 'producoes', label: 'produções' },
-  { id: 'contato', label: 'contato' },
-]
+/* ---------- HOME ---------- */
 
-export const faixa = ['adupè', 'coragem', 'persistência', 'propósito', 'comunidade', 'território']
+export const hero = {
+  // Características que aparecem em volta do nome, no estilo "chamada;"
+  acima: 'comunicadora & produtora audiovisual;',
+  abaixo: 'cria de Cajazeiras, Salvador — mulher negra afrocentrada;',
+  // A frase que define a Hinara
+  frase: { antes: 'Quando não existe oportunidade, ', destaque: 'eu crio.' },
+  // Palavras que correm na faixa amarela
+  faixa: ['comunicação', 'audiovisual', 'território', 'coragem', 'comunidade', 'propósito'],
+}
 
 export const sobre = {
   eyebrow: 'Prazer, Hinara',
+  foto: { src: '', alt: 'Retrato da Hinara do Carmo', legenda: 'foto da Hinara (em breve)' },
   titulo: { antes: 'Quem vem de longe também pode ir ', destaque: 'muito longe.' },
   paragrafos: [
-    'Filha de Gleide Letícia e Antônio Purificação, criada por minha avó, Dona Nelice. Nasci e cresci em Cajazeiras, Salvador — um território que me ensinou sobre resistência e comunidade.',
-    'Desde criança eu sabia que tinha nascido para me comunicar: prefeita da escola primária, líder de sala, gremista, e depois na rua lutando por direitos.',
-    'Sou uma mulher negra afrocentrada, mãe, observadora do mundo e profundamente comprometida em dar certo.',
+    'Nasci e cresci em Cajazeiras, Salvador, criada pela minha avó, Dona Nelice. Desde criança eu sabia que tinha nascido para me comunicar.',
+    'Comecei no Marketing como social media, mas foi no audiovisual que encontrei meu lugar — liderando produções para marcas, artistas e projetos que transformam pessoas e territórios.',
   ],
-  palavras: ['Comunicação', 'Território', 'Coragem'],
-  fotos: [
-    { src: '', alt: 'Retrato da Hinara', legenda: 'foto principal — retrato da Hinara' },
-    { src: '', alt: 'Hinara na infância', legenda: 'foto — infância' },
-    { src: '', alt: 'Família da Hinara', legenda: 'foto — família / Dona Nelice' },
-  ],
+  palavras: ['Comunicação', 'Produção', 'Coragem'],
+  link: 'conheça minha trajetória',
 }
 
-export const manifesto = {
-  linha1: 'Liberdade é',
-  linha2: 'não ter medo.',
-  apoio: { antes: 'Aprendi cedo: ', destaque: 'resistir também é imaginar futuros.' },
-}
+/* ---------- TRAJETÓRIA ---------- */
 
 export const trajetoria = {
-  eyebrow: 'Trajetória',
-  titulo: { antes: 'Minha jornada ', destaque: 'começou cedo.' },
-  marcos: [
-    { quando: 'aos 17', titulo: 'Brechó online', texto: 'Cada roupa vendida levava uma carta contando a sua história.' },
-    { quando: 'feira na periferia', titulo: 'Primeira feira produzida', texto: 'Mais de 15 expositores em uma praça de periferia.' },
-    { quando: 'cursinho', titulo: 'Delícia de Miudeza', texto: 'Vendia palha italiana para pagar o transporte do cursinho.' },
-    { quando: 'aos 19', titulo: 'Biblioteca Comunitária Condor Literário', texto: 'Coordenadora da biblioteca comunitária.' },
-    { quando: 'marketing', titulo: 'Social media', texto: 'Entrei na faculdade de Marketing e comecei como social media.' },
-    { quando: 'hoje', titulo: 'Audiovisual', texto: 'Foi no audiovisual que encontrei meu lugar — em 6 meses, uma nova profissão e uma nova perspectiva de vida.' },
+  intro: {
+    eyebrow: 'Trajetória',
+    titulo: { antes: 'Mais do que um currículo, ', destaque: 'um caminho construído.' },
+    texto: 'Os projetos a seguir contam como aprendi a transformar ideias em realidade — da periferia de Salvador aos sets de audiovisual, sempre com comunidade e propósito.',
+  },
+  blocos: [
+    {
+      categoria: 'audiovisual',
+      titulo: 'Produção audiovisual',
+      texto: 'Foi no audiovisual que encontrei meu lugar. Em seis meses, uma nova profissão e uma nova perspectiva de vida: hoje coordeno equipes, organizo sets e cuido para que cada ideia saia do papel do jeito que foi sonhada.',
+      destaques: [
+        'Criativos da Favela — Favela Filmes + CUFA',
+        'Produção do clipe do Psirico',
+        'Produção geral do clipe da Bahia FM',
+        'Liderança da produção audiovisual da Feira Preta Salvador 2025',
+      ],
+      verbos: 'planejar; liderar; realizar;',
+    },
+    {
+      categoria: 'comunicação',
+      titulo: 'Comunicação & social media',
+      texto: 'Entrei na faculdade de Marketing e comecei trabalhando como social media. Hoje levo essa bagagem para a comunicação de coletivos que atuam com cultura, território e direitos.',
+      destaques: [
+        'Social media no início da carreira',
+        'ASCOM do Coletivo Omi Ire — direitos humanos, justiça climática e economia criativa em terreiros',
+      ],
+      verbos: 'escutar; traduzir; comunicar;',
+    },
+    {
+      categoria: 'formação',
+      titulo: 'Formação',
+      texto: 'Uma trajetória de aprendizado contínuo, porque acredito que evolução constante faz parte de qualquer caminho de excelência.',
+      destaques: [
+        'Graduação em Marketing',
+        'Bolsista do Programa Sementes — PUC-RS',
+      ],
+      verbos: 'aprender; trocar; evoluir;',
+    },
+    {
+      categoria: 'empreendedorismo & comunidade',
+      titulo: 'Onde tudo começou',
+      texto: 'Cria de projetos sociais desde a infância. Quando a oportunidade não existia, eu criava: foi assim que aprendi a produzir, vender, organizar gente e cuidar de território.',
+      destaques: [
+        'Aos 17, um brechó online em que cada peça levava uma carta contando sua história',
+        'Produção da primeira feira, com mais de 15 expositores numa praça de periferia',
+        'Delícia de Miudeza: palha italiana para pagar o transporte do cursinho',
+        'Aos 19, coordenadora da Biblioteca Comunitária Condor Literário',
+        'Coletivo PerifaYoga, levando a prática às periferias de Salvador',
+      ],
+      verbos: 'criar; organizar; transformar;',
+    },
   ],
-  conclusao: { antes: 'Quando não existe oportunidade, ', destaque: 'eu crio.' },
-}
-
-export const producoes = {
-  eyebrow: 'Produções',
-  titulo: { antes: 'Transformando ideias ', destaque: 'em realidade.' },
-  itens: [
-    { titulo: 'Criativos da Favela', texto: 'Favela Filmes + CUFA. Produção audiovisual.', verbos: 'criar; produzir; conectar;', foto: { src: '', alt: 'Set do Criativos da Favela', legenda: 'foto — set Criativos da Favela' } },
-    { titulo: 'Clipe do Psirico', texto: 'Produção do videoclipe.', verbos: 'organizar; executar; entregar;', foto: { src: '', alt: 'Bastidores do clipe do Psirico', legenda: 'foto — bastidores do clipe' } },
-    { titulo: 'Clipe da Bahia FM', texto: 'Produção geral.', verbos: 'planejar; liderar; realizar;', foto: { src: '', alt: 'Clipe da Bahia FM', legenda: 'foto — clipe Bahia FM' } },
-    { titulo: 'Feira Preta Salvador 2025', texto: 'Liderança da produção audiovisual.', verbos: 'liderar; registrar; amplificar;', foto: { src: '', alt: 'Feira Preta Salvador 2025', legenda: 'foto — Feira Preta' } },
-  ],
-}
-
-export const comunidade = {
-  eyebrow: 'Comunidade',
-  titulo: { antes: 'Cria de projetos sociais ', destaque: 'desde a infância.' },
-  itens: [
-    { titulo: 'Coletivo PerifaYoga', texto: 'Democratizando o acesso ao yoga nas periferias de Salvador.' },
-    { titulo: 'Coletivo Omi Ire — ASCOM', texto: 'Direitos humanos, justiça climática e economia criativa dentro de terreiros.' },
-    { titulo: 'Programa Sementes — PUC-RS', texto: 'Bolsista do programa.' },
-    { titulo: 'Condor Literário', texto: 'Coordenação da biblioteca comunitária aos 19 anos.' },
-  ],
-}
-
-export const fortalezas = {
-  eyebrow: 'Fortalezas',
-  titulo: { antes: 'Movida por ', destaque: 'amar.' },
-  texto: 'Minha espiritualidade no Candomblé, a potência cultural do Ilê Aiyê, o amor pelo cinema brasileiro, meu filho, minha família — e a paixão por criar projetos que transformam pessoas e territórios.',
-  lista: ['Ser mãe — meu superpoder', 'Determinação', 'Adaptabilidade e flexibilidade', 'Leitura de ambiente', 'Proatividade e planejamento'],
 }

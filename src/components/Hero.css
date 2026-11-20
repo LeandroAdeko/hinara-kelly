@@ -1,17 +1,29 @@
-.hero { padding: 96px 0 80px; }
-
-.hero__inner {
-  display: grid;
-  grid-template-columns: 1.6fr 1fr;
-  gap: 48px;
-  align-items: center;
+.hero {
+  min-height: calc(100svh - 64px);
+  display: flex;
+  flex-direction: column;
 }
 
-.hero__cargo {
+.hero__inner {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 48px;
+  align-items: center;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.hero__chamada {
   display: block;
-  font-size: 14px;
+  font-size: 15px;
   color: var(--cinza);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  animation: aparece 1s .35s both;
+}
+.hero__chamada--baixo {
+  margin: 18px 0 0;
+  padding-left: clamp(48px, 10vw, 135px);
 }
 
 .hero__nome {
@@ -20,29 +32,25 @@
   font-stretch: 125%;
   line-height: .88;
   letter-spacing: -.03em;
-  font-size: clamp(56px, 11vw, 150px);
+  /* Tamanho calculado para "DO CARMO." caber em uma linha */
+  font-size: clamp(40px, 7.2vw, 124px);
 }
 
 .hero__linha {
   display: block;
+  white-space: nowrap;
   animation: sobe .9s cubic-bezier(.2, .7, .2, 1) both;
 }
-.hero__linha--2 { padding-left: .9em; animation-delay: .12s; }
-
-.hero__origem {
-  margin-top: 18px;
-  font-size: 14px;
-  color: var(--cinza);
-  padding-left: clamp(48px, 10vw, 135px);
-  animation: aparece 1s .4s both;
-}
+.hero__linha--2 { padding-left: .6em; animation-delay: .12s; }
 
 .hero__frase {
   font-family: var(--serif);
   font-style: italic;
   font-weight: 600;
-  font-size: clamp(20px, 2.2vw, 26px);
-  line-height: 1.35;
+  font-size: clamp(24px, 2.5vw, 36px);
+  line-height: 1.2;
+  border-left: 4px solid var(--amarelo);
+  padding-left: 22px;
   animation: aparece 1s .55s both;
 }
 
@@ -50,12 +58,11 @@
 @keyframes aparece { from { opacity: 0; } }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero__linha, .hero__origem, .hero__frase { animation: none; }
+  .hero__linha, .hero__chamada, .hero__frase { animation: none; }
 }
 
 @media (max-width: 860px) {
-  .hero { padding: 56px 0; }
-  .hero__inner { grid-template-columns: 1fr; gap: 36px; }
+  .hero__inner { grid-template-columns: 1fr; gap: 40px; align-content: center; }
   .hero__linha--2 { padding-left: .4em; }
-  .hero__origem { padding-left: 0; }
+  .hero__chamada--baixo { padding-left: 0; }
 }

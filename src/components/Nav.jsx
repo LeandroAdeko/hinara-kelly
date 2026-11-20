@@ -1,12 +1,8 @@
 import { useEffect, useState } from 'react'
-import { navegacao } from '../data/conteudo'
-import { useSecaoAtiva } from '../hooks/useReveal'
+import { Link, NavLink } from 'react-router-dom'
 import './Nav.css'
 
-const IDS = navegacao.map((n) => n.id)
-
 export default function Nav() {
-  const ativa = useSecaoAtiva(IDS)
   const [aberto, setAberto] = useState(false)
   const [rolou, setRolou] = useState(false)
 
@@ -21,12 +17,14 @@ export default function Nav() {
     document.body.style.overflow = aberto ? 'hidden' : ''
   }, [aberto])
 
+  const fechar = () => setAberto(false)
+
   return (
     <nav className={`nav ${rolou ? 'nav--rolou' : ''}`}>
       <div className="wrap nav__inner">
-        <a href="#topo" className="nav__logo" onClick={() => setAberto(false)}>
+        <Link to="/" className="nav__logo" onClick={fechar}>
           hinara<span>.</span>
-        </a>
+        </Link>
 
         <button
           className={`nav__burger ${aberto ? 'is-open' : ''}`}
@@ -38,18 +36,8 @@ export default function Nav() {
         </button>
 
         <ul className={`nav__links ${aberto ? 'is-open' : ''}`}>
-          {navegacao.map((item) => (
-            <li key={item.id}>
-              <a
-                href={`#${item.id}`}
-                className={ativa === item.id ? 'is-active' : ''}
-                onClick={() => setAberto(false)}
-              >
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+          <li><NavLink to="/" end onClick={fechar}>home</NavLink></li>
+          <li><NavLink to="/trajetoria" onClick={fechar}>trajetória</NavLink></li>        </ul>
       </div>
     </nav>
   )

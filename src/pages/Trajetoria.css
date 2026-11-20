@@ -1,0 +1,104 @@
+.traj-intro { padding: 96px 0 56px; }
+.traj-intro .titulo-secao { font-size: clamp(40px, 6vw, 84px); max-width: 14ch; }
+.traj-intro__texto { font-size: 19px; max-width: 58ch; color: #333; }
+
+.traj-indice {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 40px;
+}
+.traj-indice a {
+  display: inline-flex;
+  gap: 8px;
+  align-items: baseline;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  border: 2px solid var(--preto);
+  border-radius: 999px;
+  padding: 7px 16px;
+  transition: background .2s, border-color .2s;
+}
+.traj-indice a span { color: var(--amarelo); font-family: var(--display); font-weight: 900; }
+.traj-indice a:hover { background: var(--amarelo); border-color: var(--amarelo); }
+.traj-indice a:hover span { color: var(--preto); }
+
+.traj-blocos { padding-bottom: 110px; }
+
+.traj-bloco {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 56px;
+  padding: 64px 0;
+  border-top: 1px solid var(--linha);
+  scroll-margin-top: 80px;
+}
+
+.traj-bloco__cabeca { position: sticky; top: 96px; align-self: start; }
+
+.traj-bloco__num {
+  display: block;
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 125%;
+  font-size: clamp(56px, 7vw, 96px);
+  line-height: .9;
+  color: var(--amarelo);
+}
+.traj-bloco__categoria {
+  margin-top: 18px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--cinza);
+}
+.traj-bloco__titulo {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 110%;
+  letter-spacing: -.02em;
+  line-height: 1;
+  font-size: clamp(30px, 3.6vw, 48px);
+  margin-top: 6px;
+}
+
+.traj-bloco__texto { font-size: 18px; }
+
+.traj-bloco__rotulo {
+  margin-top: 28px;
+  font-weight: 700;
+}
+.traj-bloco__lista { list-style: none; margin-top: 8px; }
+.traj-bloco__lista li {
+  position: relative;
+  padding: 10px 0 10px 26px;
+  border-bottom: 1px solid var(--linha);
+}
+.traj-bloco__lista li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 19px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--amarelo);
+}
+
+.traj-bloco__verbos {
+  margin-top: 28px;
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 110%;
+  font-size: 20px;
+  color: var(--amarelo);
+}
+
+@media (max-width: 860px) {
+  .traj-intro { padding: 64px 0 32px; }
+  .traj-bloco { grid-template-columns: 1fr; gap: 24px; padding: 48px 0; }
+  .traj-bloco__cabeca { position: static; }
+  .traj-blocos { padding-bottom: 72px; }
+}
