@@ -24,7 +24,12 @@ export const hero = {
 
 export const sobre = {
   eyebrow: 'Prazer, Hinara',
-  foto: { src: '', alt: 'Retrato da Hinara do Carmo', legenda: 'foto da Hinara (em breve)' },
+  foto: {
+    src: '/fotos/hinara-pensativa.png',
+    alt: 'Hinara do Carmo, de óculos, olhando concentrada com a mão no queixo',
+    legenda: 'foto da Hinara',
+    posicao: '62% 35%', // enquadramento: centraliza o rosto
+  },
   titulo: { antes: 'Quem vem de longe também pode ir ', destaque: 'muito longe.' },
   paragrafos: [
     'Nasci e cresci em Cajazeiras, Salvador, criada pela minha avó, Dona Nelice. Desde criança eu sabia que tinha nascido para me comunicar.',
