@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { sobre } from '../data/conteudo'
+import { sobre, trajetorias } from '../data/conteudo'
 import { Foto, Reveal, TituloSecao } from './ui'
 import './Sobre.css'
 
@@ -17,9 +17,14 @@ export default function Sobre() {
           <div className="sobre__palavras">
             {sobre.palavras.map((p) => <span key={p}>{p}</span>)}
           </div>
-          <Link to="/trajetoria" className="sobre__link">
-            {sobre.link} <span aria-hidden="true">→</span>
-          </Link>
+          <p className="sobre__chamada">{sobre.link}</p>
+          <div className="sobre__links">
+            {trajetorias.map((t) => (
+              <Link key={t.rota} to={t.rota} className="sobre__link">
+                {t.menu} <span aria-hidden="true">→</span>
+              </Link>
+            ))}
+          </div>
         </Reveal>
       </div>
     </section>

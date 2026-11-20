@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { trajetorias } from '../data/conteudo'
 import './Nav.css'
 
 export default function Nav() {
@@ -37,7 +38,9 @@ export default function Nav() {
 
         <ul className={`nav__links ${aberto ? 'is-open' : ''}`}>
           <li><NavLink to="/" end onClick={fechar}>home</NavLink></li>
-          <li><NavLink to="/trajetoria" onClick={fechar}>trajetória</NavLink></li>        </ul>
+          {trajetorias.map((t) => (
+            <li key={t.rota}><NavLink to={t.rota} onClick={fechar}>{t.menu}</NavLink></li>
+          ))}        </ul>
       </div>
     </nav>
   )
