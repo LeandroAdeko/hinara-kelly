@@ -1,0 +1,1 @@
+Coloque aqui as fotos da Hinara (ex.: retrato.jpg) e aponte o caminho em src/data/conteudo.js (ex.: '/fotos/retrato.jpg').

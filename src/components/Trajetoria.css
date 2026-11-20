@@ -1,0 +1,44 @@
+.linha-tempo {
+  list-style: none;
+  border-left: 3px solid var(--amarelo);
+  margin-left: 8px;
+}
+
+.linha-tempo__item {
+  position: relative;
+  padding: 0 0 40px 36px;
+  max-width: 720px;
+}
+.linha-tempo__item::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 6px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--branco);
+  border: 3px solid var(--amarelo);
+  transition: background .3s;
+}
+.linha-tempo__item:hover::before { background: var(--amarelo); }
+
+.linha-tempo__quando {
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 110%;
+  font-size: 14px;
+  color: var(--amarelo);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.linha-tempo__item h3 { font-size: 22px; margin: 2px 0 4px; }
+.linha-tempo__item p { color: #333; }
+
+.trajetoria__conclusao {
+  margin-top: 20px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(22px, 3vw, 34px);
+}

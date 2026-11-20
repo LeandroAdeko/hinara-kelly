@@ -1,0 +1,37 @@
+.producoes { background: var(--fundo-suave); }
+
+.producoes__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: var(--branco);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--linha);
+}
+.card.reveal--on { transition: opacity .7s, transform .3s; }
+.card.reveal--on:hover { transform: translateY(-6px); }
+
+.card__foto { border-radius: 0; min-height: 200px; height: 200px; }
+
+.card__corpo { padding: 22px; }
+.card__corpo h3 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 105%;
+  font-size: 21px;
+  line-height: 1.15;
+  margin-bottom: 6px;
+}
+.card__corpo p { font-size: 15px; color: #444; }
+
+.card__verbos {
+  margin-top: 14px;
+  font-size: 13px !important;
+  font-weight: 700;
+  color: var(--amarelo) !important;
+  letter-spacing: .04em;
+}
