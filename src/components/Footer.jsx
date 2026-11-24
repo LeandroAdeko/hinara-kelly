@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { perfil } from '../data/conteudo'
+import { contato, perfil } from '../data/conteudo'
+import { Destaque } from './ui'
 import './Footer.css'
 
 export default function Footer() {
@@ -20,8 +21,9 @@ export default function Footer() {
       <div className="wrap">
         <div className="footer__topo">
           <div>
-            <p className="footer__eyebrow">entre em <b>contato</b></p>
-            <div className="footer__adupe">adupè<span>.</span></div>
+            <p className="footer__eyebrow">{contato.eyebrow}</p>
+            <h2 className="footer__titulo"><Destaque {...contato.titulo} /></h2>
+            <p className="footer__texto">{contato.texto}</p>
           </div>
 
           <ul className="footer__contatos">
@@ -33,17 +35,15 @@ export default function Footer() {
               </button>
             </li>
             <li>
+              <span className="footer__rotulo">linkedin</span>
+              <a href={perfil.linkedin.url} target="_blank" rel="noopener noreferrer">{perfil.linkedin.rotulo}</a>
+            </li>
+            <li>
               <span className="footer__rotulo">instagram</span>
               <a href={`https://instagram.com/${perfil.instagram}`} target="_blank" rel="noopener noreferrer">
                 @{perfil.instagram}
               </a>
             </li>
-            {perfil.linkedin && (
-              <li>
-                <span className="footer__rotulo">linkedin</span>
-                <a href={perfil.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              </li>
-            )}
           </ul>
         </div>
 

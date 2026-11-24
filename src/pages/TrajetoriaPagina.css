@@ -1,6 +1,6 @@
 .traj-intro { padding: 96px 0 56px; }
 .traj-intro .titulo-secao { font-size: clamp(38px, 5.4vw, 76px); max-width: 16ch; }
-.traj-intro__texto { font-size: 19px; max-width: 60ch; color: #333; margin-bottom: 14px; }
+.traj-intro__texto { font-size: 19px; max-width: 60ch; color: var(--texto-suave); margin-bottom: 14px; }
 
 .traj-indice {
   display: flex;
@@ -21,8 +21,8 @@
   transition: background .2s, border-color .2s;
 }
 .traj-indice a span { color: var(--amarelo); font-family: var(--display); font-weight: 900; }
-.traj-indice a:hover { background: var(--amarelo); border-color: var(--amarelo); }
-.traj-indice a:hover span { color: var(--preto); }
+.traj-indice a:hover { background: var(--preenchimento); border-color: var(--preenchimento); color: var(--sobre-preenchimento); }
+.traj-indice a:hover span { color: var(--sobre-preenchimento); }
 
 .traj-blocos { padding-bottom: 110px; }
 
@@ -30,7 +30,8 @@
   display: grid;
   grid-template-columns: 1fr 1.3fr;
   gap: 56px;
-  padding: 64px 0;
+  align-items: center;
+  padding: 56px 0;
   border-top: 1px solid var(--linha);
   scroll-margin-top: 80px;
 }
@@ -64,7 +65,7 @@
   margin-top: 6px;
 }
 
-.traj-bloco__texto { font-size: 18px; }
+.traj-bloco__texto { font-size: clamp(19px, 1.9vw, 24px); line-height: 1.45; max-width: 36ch; }
 
 .traj-bloco__rotulo {
   margin-top: 28px;
@@ -84,7 +85,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: var(--amarelo);
+  background: var(--preenchimento);
 }
 
 .traj-bloco__frentes {
@@ -97,8 +98,8 @@
 .traj-bloco__frentes li {
   font-size: 13px;
   font-weight: 700;
-  background: var(--amarelo);
-  color: var(--preto);
+  background: var(--preenchimento);
+  color: var(--sobre-preenchimento);
   border-radius: 999px;
   padding: 5px 14px;
 }

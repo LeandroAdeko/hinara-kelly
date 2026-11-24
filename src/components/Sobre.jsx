@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { sobre, trajetorias } from '../data/conteudo'
-import { Foto, Reveal, TituloSecao } from './ui'
+import { Destaque, Foto, Reveal, TituloSecao } from './ui'
 import './Sobre.css'
 
 export default function Sobre() {
@@ -13,10 +13,12 @@ export default function Sobre() {
 
         <Reveal delay={150}>
           <TituloSecao eyebrow={sobre.eyebrow} titulo={sobre.titulo} />
+          <p className="sobre__cargo">{sobre.cargo}</p>
+          <blockquote className="sobre__citacao">
+            <Destaque {...sobre.citacao} />
+          </blockquote>
           {sobre.paragrafos.map((p, i) => <p key={i} className="sobre__p">{p}</p>)}
-          <div className="sobre__palavras">
-            {sobre.palavras.map((p) => <span key={p}>{p}</span>)}
-          </div>
+
           <p className="sobre__chamada">{sobre.link}</p>
           <div className="sobre__links">
             {trajetorias.map((t) => (

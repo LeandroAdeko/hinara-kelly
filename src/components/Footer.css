@@ -1,7 +1,10 @@
 .footer {
-  background: var(--preto);
-  color: var(--branco);
+  /* dentro do rodapé o destaque usa a cor própria para fundo escuro */
+  --amarelo: var(--destaque-no-escuro);
+  background: var(--escuro);
+  color: var(--no-escuro);
   padding: 96px 0 28px;
+  transition: background-color .4s, color .4s;
 }
 
 .footer__topo {
@@ -10,22 +13,29 @@
   gap: 48px;
   align-items: end;
   padding-bottom: 64px;
-  border-bottom: 1px solid #2a2a2a;
+  border-bottom: 1px solid var(--no-escuro-linha);
 }
 
-.footer__eyebrow { font-size: 15px; color: #bdbdbd; }
-.footer__eyebrow b { color: var(--branco); }
+.footer__eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--amarelo);
+  margin-bottom: 14px;
+}
 
-.footer__adupe {
+.footer__titulo {
   font-family: var(--display);
   font-weight: 900;
-  font-stretch: 120%;
-  font-size: clamp(64px, 11vw, 150px);
-  line-height: .9;
-  letter-spacing: -.04em;
-  color: var(--amarelo);
+  font-stretch: 115%;
+  font-size: clamp(40px, 6vw, 80px);
+  line-height: .95;
+  letter-spacing: -.03em;
+  max-width: 12ch;
 }
-.footer__adupe span { color: var(--branco); }
+
+.footer__texto { margin-top: 20px; font-size: 18px; color: var(--no-escuro-suave); max-width: 40ch; }
 
 .footer__contatos { list-style: none; }
 .footer__contatos li {
@@ -34,7 +44,7 @@
   align-items: baseline;
   gap: 4px 14px;
   padding: 14px 0;
-  border-bottom: 1px solid #2a2a2a;
+  border-bottom: 1px solid var(--no-escuro-linha);
 }
 .footer__contatos a { text-decoration: none; transition: color .2s; }
 .footer__contatos a:hover { color: var(--amarelo); }
@@ -54,8 +64,8 @@
   font-size: 12px;
   font-weight: 700;
   background: none;
-  color: #bdbdbd;
-  border: 1px solid #444;
+  color: var(--no-escuro-suave);
+  border: 1px solid var(--no-escuro-linha);
   border-radius: 999px;
   padding: 3px 12px;
   cursor: pointer;
@@ -63,7 +73,7 @@
 }
 .footer__copiar:hover { color: var(--amarelo); border-color: var(--amarelo); }
 
-.footer__credito { padding-top: 24px; font-size: 13px; color: #8a8a8a; }
+.footer__credito { padding-top: 24px; font-size: 13px; color: var(--no-escuro-apagado); }
 
 @media (max-width: 860px) {
   .footer { padding-top: 72px; }

@@ -1,0 +1,45 @@
+.troca-paleta {
+  position: relative;
+  z-index: 2; /* fica visível por cima do menu aberto no celular */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--preto);
+  background: transparent;
+  border: 1.5px solid var(--linha);
+  border-radius: 999px;
+  padding: 5px 12px 5px 6px;
+  cursor: pointer;
+  transition: border-color .2s, transform .2s;
+}
+.troca-paleta:hover { border-color: var(--amarelo); }
+.troca-paleta:active { transform: scale(.96); }
+.troca-paleta:focus-visible { outline: 2px solid var(--amarelo); outline-offset: 3px; }
+
+/* Bolinhas sobrepostas com as cores da próxima paleta */
+.troca-paleta__cores { display: inline-flex; }
+.troca-paleta__cores span {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid var(--branco);
+  box-shadow: 0 0 0 1px var(--linha);
+  transition: transform .25s;
+}
+.troca-paleta__cores span + span { margin-left: -6px; }
+.troca-paleta:hover .troca-paleta__cores span:nth-child(2) { transform: translateY(-2px); }
+.troca-paleta:hover .troca-paleta__cores span:nth-child(3) { transform: translateY(-3px); }
+
+@media (max-width: 400px) {
+  .troca-paleta__nome { display: none; }
+  .troca-paleta { padding: 5px 6px; }
+}
+
+/* Botão claro/escuro (mesmo estilo, com ícone no lugar das bolinhas) */
+.troca-modo { padding: 5px 12px 5px 9px; }
+.troca-modo svg { transition: transform .35s; }
+.troca-modo:hover svg { transform: rotate(-20deg); }
+@media (max-width: 400px) { .troca-modo { padding: 6px; } }

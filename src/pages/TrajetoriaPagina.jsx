@@ -37,7 +37,7 @@ export default function TrajetoriaPagina({ dados }) {
           <Reveal as="article" key={b.titulo} id={`bloco-${i}`} className="traj-bloco">
             <div className="traj-bloco__cabeca">
               <span className="traj-bloco__num">{num(i)}</span>
-              <p className="traj-bloco__categoria">{b.subtitulo}</p>
+              <p className="traj-bloco__categoria">{b.cliente}</p>
               <h2 className="traj-bloco__titulo">{b.titulo}</h2>
             </div>
             <div className="traj-bloco__corpo">
@@ -50,9 +50,11 @@ export default function TrajetoriaPagina({ dados }) {
                   </ul>
                 </>
               )}
-              <ul className="traj-bloco__frentes" aria-label="Frentes de atuação">
-                {b.frentes.map((f) => <li key={f}>{f}</li>)}
-              </ul>
+              {b.frentes && (
+                <ul className="traj-bloco__frentes" aria-label="Frentes de atuação">
+                  {b.frentes.map((f) => <li key={f}>{f}</li>)}
+                </ul>
+              )}
             </div>
           </Reveal>
         ))}

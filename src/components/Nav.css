@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(255, 255, 255, .9);
+  background: color-mix(in srgb, var(--branco) 90%, transparent);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid transparent;
   transition: border-color .3s;
@@ -27,6 +27,10 @@
   z-index: 2;
 }
 .nav__logo span { color: var(--amarelo); }
+
+.nav__acoes { display: flex; align-items: center; gap: 28px; }
+.nav__preferencias { display: flex; align-items: center; gap: 8px; }
+@media (max-width: 720px) { .nav__acoes { gap: 12px; } }
 
 .nav__links {
   display: flex;

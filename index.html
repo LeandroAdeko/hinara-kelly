@@ -3,13 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Hinara do Carmo — comunicadora e produtora audiovisual. Salvador, Bahia." />
+    <meta name="description" content="Inara Kelly do Carmo — Assistente de Estratégia e Produtora Audiovisual. Estratégia, cultura e produção, de Salvador para onde as ideias levarem." />
     <meta name="theme-color" content="#DFA526" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Fraunces:ital,opsz,wght@1,9..144,600&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
-    <title>Hinara do Carmo</title>
+    <title>Inara Kelly do Carmo</title>
+    <script>
+      // Aplica a paleta salva antes de desenhar a página (evita piscar a paleta errada).
+      // O modo claro/escuro não é salvo: começa sempre pelo do sistema (via CSS).
+      try {
+        if (localStorage.getItem('paleta') === 'terra') document.documentElement.dataset.paleta = 'terra'
+        localStorage.removeItem('modo') // limpa escolha salva pela versão anterior
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>

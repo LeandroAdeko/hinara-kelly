@@ -1,15 +1,119 @@
+/* ---------- PALETAS ----------
+   Os nomes das variáveis vêm da paleta original, mas cada uma tem um papel:
+   --amarelo        destaque (textos em destaque, bordas, números)
+   --preenchimento  fundos coloridos (faixa, etiquetas, seleção)
+   --preto          texto principal
+   --branco         fundo da página
+   --escuro / --no-escuro*  rodapé e outras áreas escuras */
+
+/* Paleta clássica: branco + #DFA526 */
 :root {
+  color-scheme: light;
   --amarelo: #DFA526;
+  --preenchimento: #DFA526;
+  --sobre-preenchimento: #111; /* texto em cima de --preenchimento */
   --preto: #111;
   --branco: #fff;
   --creme: #f6f1e4;
   --fundo-suave: #fbf8f1;
   --cinza: #6b6b6b;
   --linha: #e8e8e8;
+  --texto-suave: #333;
+  --escuro: #111;
+  --no-escuro: #fff;
+  --no-escuro-suave: #cfcfcf;
+  --no-escuro-apagado: #8a8a8a;
+  --no-escuro-linha: #2a2a2a;
+  --destaque-no-escuro: #DFA526;
   --raio: 18px;
   --display: "Archivo", "Arial Black", sans-serif;
   --corpo: "Montserrat", system-ui, sans-serif;
   --serif: "Fraunces", Georgia, serif;
+}
+
+/* Paleta terra: Palha, Sol e Caatinga */
+:root[data-paleta="terra"] {
+  /* Só três cores. Os tons intermediários são misturas delas. */
+  --palha: #EFE7D9;
+  --sol: #DA9F45;
+  --caatinga: #424D25;
+
+  --amarelo: var(--sol);
+  --preenchimento: var(--sol);
+  --sobre-preenchimento: var(--caatinga);
+  --preto: var(--caatinga);
+  --branco: var(--palha);
+  --creme: color-mix(in srgb, var(--sol) 18%, var(--palha));
+  --fundo-suave: color-mix(in srgb, var(--caatinga) 5%, var(--palha));
+  --cinza: color-mix(in srgb, var(--caatinga) 75%, var(--palha));
+  --linha: color-mix(in srgb, var(--caatinga) 15%, var(--palha));
+  --texto-suave: var(--caatinga);
+  --escuro: var(--caatinga);
+  --no-escuro: var(--palha);
+  --no-escuro-suave: color-mix(in srgb, var(--palha) 80%, var(--caatinga));
+  --no-escuro-apagado: color-mix(in srgb, var(--palha) 55%, var(--caatinga));
+  --no-escuro-linha: color-mix(in srgb, var(--palha) 18%, var(--caatinga));
+  --destaque-no-escuro: var(--sol);
+}
+
+/* ---------- MODO ESCURO ----------
+   Antes do site carregar (data-modo ausente), segue o sistema.
+   Depois, o botão define data-modo="claro" ou "escuro".
+   Os blocos abaixo se repetem porque CSS não deixa juntar a regra
+   do sistema (@media) com a escolha manual num seletor só. */
+
+@media (prefers-color-scheme: dark) {
+  /* clássica escura */
+  :root:not([data-modo="claro"]) {
+    color-scheme: dark;
+    --preto: #F2F2F2;
+    --branco: #121212;
+    --creme: #1F1B12;
+    --fundo-suave: #181818;
+    --cinza: #A3A3A3;
+    --linha: #2C2C2C;
+    --texto-suave: #D4D4D4;
+    --escuro: #000;
+    --no-escuro-linha: #262626;
+  }
+  /* terra escura: só Palha, Sol e Caatinga (a Caatinga escurecida vira o fundo) */
+  :root[data-paleta="terra"]:not([data-modo="claro"]) {
+    --preto: var(--palha);
+    --branco: color-mix(in srgb, var(--caatinga) 70%, #000);
+    --creme: color-mix(in srgb, var(--sol) 14%, var(--branco));
+    --fundo-suave: color-mix(in srgb, var(--caatinga) 85%, #000);
+    --cinza: color-mix(in srgb, var(--palha) 70%, var(--caatinga));
+    --linha: color-mix(in srgb, var(--palha) 16%, var(--branco));
+    --texto-suave: color-mix(in srgb, var(--palha) 88%, var(--caatinga));
+    --escuro: color-mix(in srgb, var(--caatinga) 45%, #000);
+    --no-escuro-linha: color-mix(in srgb, var(--palha) 14%, var(--escuro));
+  }
+}
+
+/* clássica escura (escolha manual) */
+:root[data-modo="escuro"] {
+  color-scheme: dark;
+  --preto: #F2F2F2;
+  --branco: #121212;
+  --creme: #1F1B12;
+  --fundo-suave: #181818;
+  --cinza: #A3A3A3;
+  --linha: #2C2C2C;
+  --texto-suave: #D4D4D4;
+  --escuro: #000;
+  --no-escuro-linha: #262626;
+}
+/* terra escura (escolha manual) */
+:root[data-modo="escuro"][data-paleta="terra"] {
+  --preto: var(--palha);
+  --branco: color-mix(in srgb, var(--caatinga) 70%, #000);
+  --creme: color-mix(in srgb, var(--sol) 14%, var(--branco));
+  --fundo-suave: color-mix(in srgb, var(--caatinga) 85%, #000);
+  --cinza: color-mix(in srgb, var(--palha) 70%, var(--caatinga));
+  --linha: color-mix(in srgb, var(--palha) 16%, var(--branco));
+  --texto-suave: color-mix(in srgb, var(--palha) 88%, var(--caatinga));
+  --escuro: color-mix(in srgb, var(--caatinga) 45%, #000);
+  --no-escuro-linha: color-mix(in srgb, var(--palha) 14%, var(--escuro));
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -22,10 +126,11 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  transition: background-color .4s, color .4s;
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
-::selection { background: var(--amarelo); color: var(--preto); }
+::selection { background: var(--preenchimento); color: var(--sobre-preenchimento); }
 
 .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 .secao { padding: 110px 0; }
