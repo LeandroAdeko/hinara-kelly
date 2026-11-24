@@ -26,10 +26,10 @@
   --no-escuro-linha: #2a2a2a;
   --destaque-no-escuro: #DFA526;
   --raio: 18px;
-  /* Conjunto de fontes "marcante" (padrão) */
+  /* Conjunto de fontes "marcante" (base; a padrão do site é a "tight", ver index.html) */
   --display: "Archivo", "Arial Black", sans-serif;
-  --display-peso: 900;
-  --display-peso-medio: 800;
+  --display-peso: 800;
+  --display-peso-medio: 700;
   --corpo: "Montserrat", system-ui, sans-serif;
   --serif: "Fraunces", Georgia, serif;
   --citacao-estilo: italic;
@@ -47,9 +47,9 @@
    --corpo    textos, menu, botões e rótulos
    --serif    citações e frases de destaque
 
-   marcante (padrão): Archivo largo e extra-negrito + Montserrat + Fraunces itálico
+   marcante (base do CSS): Archivo largo e negrito + Montserrat + Fraunces itálico
    contida:           Archivo na largura normal, peso médio, letras juntas (estilo Helvetica)
-   tight:             Inter Tight nos títulos e citações + Inter nos textos
+   tight (PADRÃO do site, definido no index.html): Inter Tight nos títulos e citações + Inter nos textos
    neutra:            Inter em tudo, sóbria e limpa
    editorial:         Fraunces + Source Serif 4, todo com serifa, estilo revista
    geometrica:        Space Grotesk + DM Sans, tecnológica e moderna

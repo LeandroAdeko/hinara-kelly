@@ -14,6 +14,8 @@ function paletaInicial() {
 
 // Botão que alterna entre a paleta clássica e a paleta terra.
 // A escolha fica salva neste navegador.
+// Hoje está escondido (a paleta oficial é a terra). Para mostrar de novo,
+// ligue MOSTRAR_BOTAO_PALETA em src/components/Nav.jsx e siga o comentário do index.html.
 export default function TrocaPaleta() {
   const [paleta, setPaleta] = useState(paletaInicial)
   const proxima = paleta === 'terra' ? 'classica' : 'terra'

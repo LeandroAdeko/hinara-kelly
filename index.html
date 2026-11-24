@@ -1,10 +1,13 @@
 <!doctype html>
-<html lang="pt-BR">
+<!-- data-paleta="terra": paleta oficial do site. Sem o atributo, vale a paleta clássica.
+     data-fonte="tight": fonte padrão (Inter Tight). Sem o atributo, vale a "marcante".
+     O painel de fontes "Aa" existe, mas está escondido (ver src/components/Nav.jsx). -->
+<html lang="pt-BR" data-paleta="terra" data-fonte="tight">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Inara Kelly do Carmo — Assistente de Estratégia e Produtora Audiovisual. Estratégia, cultura e produção, de Salvador para onde as ideias levarem." />
-    <meta name="theme-color" content="#DFA526" />
+    <meta name="description" content="Inara Kelly do Carmo — Assistente de Estratégia e Produtora Audiovisual. Cultura, pesquisa e produção." />
+    <meta name="theme-color" content="#424D25" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,14 +16,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500..700&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..600&family=Syne:wght@600..800&family=Manrope:wght@400..700&family=Playfair+Display:ital,wght@0,600..800;1,500&family=Lora:ital,wght@0,400..700;1,400..600&family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,500;0,700;1,500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
     <title>Inara Kelly do Carmo</title>
     <script>
-      // Aplica a paleta e a fonte salvas antes de desenhar a página (evita piscar).
       // O modo claro/escuro não é salvo: começa sempre pelo do sistema (via CSS).
+      // Paleta (terra) e fonte (Inter Tight) são fixas, definidas no <html> acima.
+      // Os botões de paleta e de fonte estão escondidos em src/components/Nav.jsx.
+      // Se forem religados, troque as linhas de limpeza abaixo por estas, para o site
+      // voltar a respeitar a escolha salva de cada visitante:
+      //   if (localStorage.getItem('paleta') === 'classica') delete document.documentElement.dataset.paleta
+      //   var fonte = localStorage.getItem('fonte-escolhida')
+      //   if (fonte === 'marcante') document.documentElement.removeAttribute('data-fonte')
+      //   else if (fonte && /^[a-z-]+$/.test(fonte)) document.documentElement.dataset.fonte = fonte
       try {
-        if (localStorage.getItem('paleta') === 'terra') document.documentElement.dataset.paleta = 'terra'
-        var fonte = localStorage.getItem('fonte')
-        // qualquer conjunto definido em src/index.css (nomes desconhecidos caem no padrão)
-        if (fonte && /^[a-z-]+$/.test(fonte) && fonte !== 'marcante') document.documentElement.dataset.fonte = fonte
-        localStorage.removeItem('modo') // limpa escolha salva pela versão anterior
+        // limpa escolhas salvas durante os testes, para todos verem a paleta e a fonte oficiais
+        localStorage.removeItem('paleta')
+        localStorage.removeItem('fonte')
+        localStorage.removeItem('fonte-escolhida')
+        localStorage.removeItem('modo')
       } catch (e) {}
     </script>
   </head>

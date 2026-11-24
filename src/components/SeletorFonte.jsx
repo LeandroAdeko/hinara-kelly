@@ -9,8 +9,8 @@ export const FONTES = [
   {
     id: 'marcante',
     nome: 'Marcante',
-    descricao: 'Larga e extra-negrito. Forte, chama atenção.',
-    titulo: { fontFamily: '"Archivo", sans-serif', fontWeight: 900, fontStretch: '125%' },
+    descricao: 'Larga e negrita. Forte, chama atenção.',
+    titulo: { fontFamily: '"Archivo", sans-serif', fontWeight: 800, fontStretch: '125%' },
     texto: { fontFamily: '"Montserrat", sans-serif' },
   },
   {
@@ -77,16 +77,20 @@ export const FONTES = [
     texto: { fontFamily: '"DM Sans", sans-serif' },
   },
 ]
-const PADRAO = 'marcante'
-const CHAVE = 'fonte'
+// A fonte padrão do site é definida no <html> do index.html (data-fonte="tight").
+// "marcante" é a base do CSS (:root), por isso é a única sem atributo.
+const BASE_CSS = 'marcante'
+const CHAVE = 'fonte-escolhida'
 
 function fonteInicial() {
   const f = document.documentElement.dataset.fonte
-  return FONTES.some((x) => x.id === f) ? f : PADRAO
+  if (!f) return BASE_CSS
+  return FONTES.some((x) => x.id === f) ? f : BASE_CSS
 }
 
 // Botão "Aa" que abre um painel para escolher o conjunto de fontes.
 // A escolha vale na hora (dá para comparar sem fechar) e fica salva neste navegador.
+// Só é salva quando a pessoa clica numa opção; sem isso, vale a padrão do site.
 export default function SeletorFonte() {
   const [fonte, setFonte] = useState(fonteInicial)
   const [aberto, setAberto] = useState(false)
@@ -95,10 +99,14 @@ export default function SeletorFonte() {
 
   useEffect(() => {
     const raiz = document.documentElement
-    if (fonte === PADRAO) raiz.removeAttribute('data-fonte')
+    if (fonte === BASE_CSS) raiz.removeAttribute('data-fonte')
     else raiz.dataset.fonte = fonte
-    try { localStorage.setItem(CHAVE, fonte) } catch { /* navegação privada: só não salva */ }
   }, [fonte])
+
+  const escolher = (id) => {
+    setFonte(id)
+    try { localStorage.setItem(CHAVE, id) } catch { /* navegação privada: só não salva */ }
+  }
 
   // Fecha com Esc ou clicando fora do painel
   useEffect(() => {
@@ -122,7 +130,7 @@ export default function SeletorFonte() {
     const i = FONTES.findIndex((f) => f.id === fonte)
     const passo = e.key === 'ArrowDown' ? 1 : -1
     const proxima = FONTES[(i + passo + FONTES.length) % FONTES.length]
-    setFonte(proxima.id)
+    escolher(proxima.id)
     raizRef.current?.querySelector(`[data-id="${proxima.id}"]`)?.focus()
   }
 
@@ -160,7 +168,7 @@ export default function SeletorFonte() {
                   tabIndex={escolhida ? 0 : -1}
                   data-id={f.id}
                   className={`seletor-fonte__opcao ${escolhida ? 'is-escolhida' : ''}`}
-                  onClick={() => setFonte(f.id)}
+                  onClick={() => escolher(f.id)}
                 >
                   <span className="seletor-fonte__previa" style={f.titulo}>Inara Kelly</span>
                   <span className="seletor-fonte__nome" style={f.texto}>{f.nome}</span>

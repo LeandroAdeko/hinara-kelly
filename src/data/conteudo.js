@@ -20,7 +20,7 @@ export const citacao = {
 
 export const hero = {
   acima: perfil.cargo,
-  abaixo: 'Estratégia, cultura e produção. De Salvador para onde as ideias me levarem.',
+  abaixo: 'Cultura, pesquisa e produção.',
   frase: citacao,
   // Palavras que correm na faixa amarela
   faixa: ['estratégia', 'cultura', 'produção', 'investigação', 'pessoas', 'território'],

@@ -4,7 +4,17 @@ import { trajetorias } from '../data/conteudo'
 import TrocaPaleta from './TrocaPaleta'
 import TrocaModo from './TrocaModo'
 import SeletorFonte from './SeletorFonte'
+
 import './Nav.css'
+
+// A paleta oficial é a terra. O botão de trocar paleta fica escondido, mas o código
+// continua pronto: mude para true para mostrar o botão de novo.
+const MOSTRAR_BOTAO_PALETA = false
+
+// A fonte oficial é a Inter Tight. O painel de fontes ("Aa") fica escondido, mas o
+// código continua pronto: mude para true para mostrar o botão de novo e siga o
+// comentário do index.html para o site voltar a lembrar a escolha da visitante.
+const MOSTRAR_BOTAO_FONTE = false
 
 export default function Nav() {
   const [aberto, setAberto] = useState(false)
@@ -40,8 +50,8 @@ export default function Nav() {
 
           <div className="nav__preferencias">
             <TrocaModo />
-            <TrocaPaleta />
-            <SeletorFonte />
+            {MOSTRAR_BOTAO_PALETA && <TrocaPaleta />}
+            {MOSTRAR_BOTAO_FONTE && <SeletorFonte />}
           </div>
 
           <button
