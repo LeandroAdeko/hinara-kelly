@@ -34,8 +34,8 @@
 
 .sobre__citacao {
   font-family: var(--serif);
-  font-style: italic;
-  font-weight: 600;
+  font-style: var(--citacao-estilo);
+  font-weight: var(--citacao-peso);
   font-size: clamp(19px, 1.8vw, 23px);
   line-height: 1.35;
   border-left: 4px solid var(--amarelo);

@@ -18,8 +18,8 @@
 
 .nav__logo {
   font-family: var(--display);
-  font-weight: 900;
-  font-stretch: 115%;
+  font-weight: var(--display-peso);
+  font-stretch: calc(100% + (115% - 100%) * var(--esticar));
   letter-spacing: -.02em;
   text-decoration: none;
   font-size: 19px;
@@ -98,8 +98,8 @@
   .nav__links a,
   .nav__links button {
     font-family: var(--display);
-    font-weight: 900;
-    font-stretch: 115%;
+    font-weight: var(--display-peso);
+    font-stretch: calc(100% + (115% - 100%) * var(--esticar));
     font-size: 44px;
     border: 0;
   }

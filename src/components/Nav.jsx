@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 import { trajetorias } from '../data/conteudo'
 import TrocaPaleta from './TrocaPaleta'
 import TrocaModo from './TrocaModo'
+import SeletorFonte from './SeletorFonte'
 import './Nav.css'
 
 export default function Nav() {
@@ -40,6 +41,7 @@ export default function Nav() {
           <div className="nav__preferencias">
             <TrocaModo />
             <TrocaPaleta />
+            <SeletorFonte />
           </div>
 
           <button

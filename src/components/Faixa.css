@@ -5,8 +5,8 @@
   white-space: nowrap;
   padding: 14px 0;
   font-family: var(--display);
-  font-weight: 800;
-  font-stretch: 110%;
+  font-weight: var(--display-peso-medio);
+  font-stretch: calc(100% + (110% - 100%) * var(--esticar));
   font-size: 20px;
   text-transform: lowercase;
 }

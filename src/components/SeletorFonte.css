@@ -1,0 +1,96 @@
+.seletor-fonte { position: relative; z-index: 3; }
+
+.seletor-fonte__painel {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: 340px;
+  max-height: calc(100dvh - 100px);
+  overflow-y: auto;
+  background: var(--branco);
+  color: var(--preto);
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+  box-shadow: 0 24px 48px -20px rgba(0, 0, 0, .35);
+  padding: 14px;
+  animation: painel-abre .18s ease-out;
+}
+@keyframes painel-abre { from { opacity: 0; transform: translateY(-6px); } }
+
+.seletor-fonte__topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 6px 10px;
+}
+.seletor-fonte__titulo {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--amarelo);
+}
+.seletor-fonte__fechar {
+  font: inherit;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--cinza);
+  background: none;
+  border: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.seletor-fonte__fechar:hover { background: var(--fundo-suave); color: var(--preto); }
+
+.seletor-fonte__lista { display: grid; gap: 6px; }
+
+.seletor-fonte__opcao {
+  position: relative;
+  display: grid;
+  gap: 2px;
+  text-align: left;
+  color: inherit;
+  background: none;
+  border: 1.5px solid transparent;
+  border-radius: 12px;
+  padding: 12px 40px 12px 14px;
+  cursor: pointer;
+  transition: background .15s, border-color .15s;
+}
+.seletor-fonte__opcao:hover { background: var(--fundo-suave); }
+.seletor-fonte__opcao:focus-visible { outline: 2px solid var(--amarelo); outline-offset: 2px; }
+.seletor-fonte__opcao.is-escolhida { border-color: var(--amarelo); background: var(--fundo-suave); }
+
+.seletor-fonte__previa {
+  font-size: 24px;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+}
+.seletor-fonte__nome { font-size: 14px; font-weight: 700; margin-top: 6px; }
+.seletor-fonte__descricao { font-size: 13px; color: var(--cinza); line-height: 1.4; }
+
+.seletor-fonte__marca {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--amarelo);
+}
+
+/* Celular: o painel ocupa a largura da tela, logo abaixo do menu */
+@media (max-width: 720px) {
+  .seletor-fonte__painel {
+    position: fixed;
+    top: 72px;
+    left: 16px;
+    right: 16px;
+    width: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .seletor-fonte__painel { animation: none; }
+}

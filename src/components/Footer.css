@@ -27,8 +27,8 @@
 
 .footer__titulo {
   font-family: var(--display);
-  font-weight: 900;
-  font-stretch: 115%;
+  font-weight: var(--display-peso);
+  font-stretch: calc(100% + (115% - 100%) * var(--esticar));
   font-size: clamp(40px, 6vw, 80px);
   line-height: .95;
   letter-spacing: -.03em;

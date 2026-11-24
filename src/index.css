@@ -26,9 +26,135 @@
   --no-escuro-linha: #2a2a2a;
   --destaque-no-escuro: #DFA526;
   --raio: 18px;
+  /* Conjunto de fontes "marcante" (padrão) */
   --display: "Archivo", "Arial Black", sans-serif;
+  --display-peso: 900;
+  --display-peso-medio: 800;
   --corpo: "Montserrat", system-ui, sans-serif;
   --serif: "Fraunces", Georgia, serif;
+  --citacao-estilo: italic;
+  --citacao-peso: 600;
+  /* 1 = títulos esticados (Archivo largo); 0 = largura normal */
+  --esticar: 1;
+  /* Multiplica o tamanho do nome no topo. Fontes mais estreitas pedem um nome maior
+     para ocupar a mesma largura; fontes largas, um menor. */
+  --nome-escala: calc(1.25 - .25 * var(--esticar));
+}
+
+/* ---------- CONJUNTOS DE FONTES ----------
+   Cada conjunto troca as três fontes do site:
+   --display  títulos, nome, logo, faixa e números
+   --corpo    textos, menu, botões e rótulos
+   --serif    citações e frases de destaque
+
+   marcante (padrão): Archivo largo e extra-negrito + Montserrat + Fraunces itálico
+   contida:           Archivo na largura normal, peso médio, letras juntas (estilo Helvetica)
+   tight:             Inter Tight nos títulos e citações + Inter nos textos
+   neutra:            Inter em tudo, sóbria e limpa
+   editorial:         Fraunces + Source Serif 4, todo com serifa, estilo revista
+   geometrica:        Space Grotesk + DM Sans, tecnológica e moderna
+   ousada:            Syne extra-negrito + Manrope, experimental
+   elegante:          Playfair Display + Lora, sofisticada e contrastada
+   condensada:        Bebas Neue + Barlow, alta e estreita, estilo pôster
+   retro:             DM Serif Display + DM Sans, serifa de anúncio antigo
+
+   Para criar um conjunto novo: copie um bloco abaixo, troque o nome em
+   data-fonte, carregue as fontes no index.html e adicione a opção em
+   src/components/SeletorFonte.jsx (a lista do painel). */
+:root[data-fonte="contida"] {
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --display-peso: 600;
+  --display-peso-medio: 600;
+  --corpo: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --citacao-estilo: italic;
+  --citacao-peso: 500;
+  --esticar: 0;
+}
+:root[data-fonte="tight"] {
+  --display: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+  --display-peso: 600;
+  --display-peso-medio: 600;
+  --corpo: "Inter", system-ui, sans-serif;
+  --serif: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+  --citacao-estilo: italic;
+  --citacao-peso: 500;
+  --esticar: 0;
+}
+:root[data-fonte="neutra"] {
+  --display: "Inter", system-ui, sans-serif;
+  --display-peso: 700;
+  --display-peso-medio: 600;
+  --corpo: "Inter", system-ui, sans-serif;
+  --serif: "Inter", system-ui, sans-serif;
+  --citacao-estilo: italic;
+  --citacao-peso: 500;
+  --esticar: 0;
+}
+:root[data-fonte="editorial"] {
+  --display: "Fraunces", Georgia, serif;
+  --display-peso: 600;
+  --display-peso-medio: 600;
+  --corpo: "Source Serif 4", Georgia, serif;
+  --serif: "Fraunces", Georgia, serif;
+  --citacao-estilo: italic;
+  --citacao-peso: 400;
+  --esticar: 0;
+}
+:root[data-fonte="geometrica"] {
+  --display: "Space Grotesk", system-ui, sans-serif;
+  --display-peso: 700;
+  --display-peso-medio: 600;
+  --corpo: "DM Sans", system-ui, sans-serif;
+  --serif: "DM Sans", system-ui, sans-serif;
+  --citacao-estilo: italic;
+  --citacao-peso: 500;
+  --esticar: 0;
+  --nome-escala: 1.1;
+}
+:root[data-fonte="ousada"] {
+  --display: "Syne", system-ui, sans-serif;
+  --display-peso: 800;
+  --display-peso-medio: 700;
+  --corpo: "Manrope", system-ui, sans-serif;
+  --serif: "Syne", system-ui, sans-serif;
+  --citacao-estilo: normal; /* Syne não tem itálico */
+  --citacao-peso: 600;
+  --esticar: 0;
+  --nome-escala: 1;
+}
+:root[data-fonte="elegante"] {
+  --display: "Playfair Display", Georgia, serif;
+  --display-peso: 700;
+  --display-peso-medio: 600;
+  --corpo: "Lora", Georgia, serif;
+  --serif: "Playfair Display", Georgia, serif;
+  --citacao-estilo: italic;
+  --citacao-peso: 500;
+  --esticar: 0;
+  --nome-escala: 1.1;
+}
+:root[data-fonte="condensada"] {
+  --display: "Bebas Neue", Impact, sans-serif;
+  --display-peso: 400; /* Bebas Neue só tem um peso */
+  --display-peso-medio: 400;
+  --corpo: "Barlow", system-ui, sans-serif;
+  --serif: "Barlow", system-ui, sans-serif;
+  --citacao-estilo: italic;
+  --citacao-peso: 500;
+  --esticar: 0;
+  --nome-escala: 1.5;
+}
+:root[data-fonte="retro"] {
+  --display: "DM Serif Display", Georgia, serif;
+  --display-peso: 400; /* DM Serif Display só tem um peso */
+  --display-peso-medio: 400;
+  --corpo: "DM Sans", system-ui, sans-serif;
+  --serif: "DM Serif Display", Georgia, serif;
+  --citacao-estilo: italic;
+  --citacao-peso: 400;
+  --esticar: 0;
+  --nome-escala: 1.15;
 }
 
 /* Paleta terra: Palha, Sol e Caatinga */

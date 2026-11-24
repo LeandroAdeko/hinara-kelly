@@ -43,3 +43,8 @@
 .troca-modo svg { transition: transform .35s; }
 .troca-modo:hover svg { transform: rotate(-20deg); }
 @media (max-width: 400px) { .troca-modo { padding: 6px; } }
+
+/* Botão de fonte: "Aa" desenhado na fonte atual */
+.troca-fonte { padding: 4px 12px 4px 9px; }
+.troca-fonte__amostra { font-size: 15px; line-height: 1; min-width: 22px; text-align: center; }
+@media (max-width: 400px) { .troca-fonte { padding: 5px 7px; } }
