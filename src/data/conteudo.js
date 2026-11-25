@@ -43,6 +43,23 @@ export const sobre = {
   link: 'conheça meus trabalhos',
 }
 
+// Nuvem de marcas (logo abaixo da seção sobre). Os arquivos ficam em public/marcas/
+// e precisam ter fundo transparente: o site pinta todos na cor do texto.
+// `proporcao` = largura ÷ altura do arquivo; serve para deixar todas com tamanho
+// visual parecido. `escala` (opcional) ajusta à mão uma marca que pareça grande demais.
+export const marcas = {
+  // Título único, no mesmo estilo dos rótulos pequenos (ex.: "sobre", "contato")
+  titulo: 'com quem já caminhei',
+  lista: [
+    { nome: 'VML', src: '/marcas/vml.svg', proporcao: 3.26 },
+    { nome: 'Favela Filmes', src: '/marcas/favela-filmes-original-transparente.png', proporcao: 1.82, escala: 1.1 },
+    { nome: 'Wieden+Kennedy', src: '/marcas/wieden-kennedy.svg', proporcao: 2.24 },
+    { nome: 'Wakanda Educação Empreendedora', src: '/marcas/wakanda-simbolo.png', proporcao: 1, escala: 0.8 },
+    { nome: 'YouPix', src: '/marcas/youpix.png', proporcao: 2.97 },
+    { nome: 'VVAMO (antiga mmova)', src: '/marcas/vvamo.svg', proporcao: 4.33 },
+  ],
+}
+
 export const contato = {
   eyebrow: 'contato',
   titulo: { antes: 'Vamos construir algo ', destaque: 'juntos?' },

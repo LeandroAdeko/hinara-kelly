@@ -1,0 +1,45 @@
+.marcas { padding-top: 0; }
+.marcas__topo { text-align: center; }
+.marcas__titulo { margin-bottom: 0; }
+
+.marcas__nuvem {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 44px 64px;
+  /* estreita de propósito: as marcas quebram em linhas e formam a nuvem */
+  max-width: 640px;
+  margin: 24px auto 0;
+  /* lado de um logo quadrado; os outros têm a mesma área */
+  --base: clamp(50px, 7vw, 76px);
+}
+
+/* Deslocamentos alternados para o desenho de nuvem, e não de grade.
+   Usa `translate` (e não transform) para não brigar com a animação de entrada. */
+.marcas__item:nth-child(3n + 1) { translate: 0 14px; }
+.marcas__item:nth-child(3n + 2) { translate: 0 -12px; }
+.marcas__item:nth-child(4n) { translate: 0 22px; }
+
+.marcas__logo {
+  display: block;
+  width: calc(var(--base) * var(--raiz) * var(--escala));
+  height: calc(var(--base) / var(--raiz) * var(--escala));
+  background-color: var(--preto);
+  -webkit-mask: var(--logo) center / contain no-repeat;
+  mask: var(--logo) center / contain no-repeat;
+  opacity: .85;
+  transition: background-color .25s, opacity .25s, transform .25s;
+}
+.marcas__logo:hover {
+  background-color: var(--amarelo);
+  opacity: 1;
+  transform: scale(1.06);
+}
+
+@media (max-width: 600px) {
+  .marcas__nuvem { gap: 34px 40px; --base: 46px; }
+  .marcas__item:nth-child(n) { translate: none; }
+  .marcas__item:nth-child(odd) { translate: 0 8px; }
+}
