@@ -1,9 +1,10 @@
-import { hero, perfil } from '../data/conteudo'
 import Faixa from './Faixa'
 import { Destaque } from './ui'
+import { useConteudo } from '../i18n/Lingua'
 import './Hero.css'
 
 export default function Hero() {
+  const { hero, perfil } = useConteudo()
   const [linha1, linha2] = perfil.nome
   return (
     <header className="hero">

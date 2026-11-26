@@ -1,0 +1,80 @@
+{
+  "lingua": { "codigo": "en", "sigla": "EN", "nome": "English", "ordem": 2 },
+
+  "ui": {
+    "descricao": "Inara Kelly do Carmo — Strategy Assistant and Audiovisual Producer. Culture, research and production.",
+    "menu": { "home": "home", "abrir": "Open menu", "fechar": "Close menu" },
+    "idioma": { "rotulo": "Site language", "trocar": "View the site in {lingua}" },
+    "modo": { "claro": "light", "escuro": "dark", "descricao": "{atual} mode. Click to switch to {proximo} mode" },
+    "contato": { "email": "e-mail", "copiar": "copy", "copiado": "copied ✓" },
+    "trajetoria": {
+      "indice": "Projects on this page",
+      "destaques": "Highlights:",
+      "frentes": "Areas of work",
+      "vejaTambem": "see also"
+    }
+  },
+
+  "cargo": "Strategy Assistant | Audiovisual Producer",
+
+  "citacao": {
+    "antes": "“When a river meets another river, it doesn't stop being a river, ",
+    "destaque": "it becomes a bigger river.”"
+  },
+
+  "hero": {
+    "abaixo": "Culture, research and production.",
+    "faixa": ["strategy", "culture", "production", "research", "people", "territory"]
+  },
+
+  "sobre": {
+    "eyebrow": "About",
+    "fotoAlt": "Inara Kelly do Carmo smiling, wearing hoop earrings, in front of a brick wall",
+    "titulo": { "antes": "Inara Kelly ", "destaque": "do Carmo" },
+    "paragrafos": [
+      "I'm Inara, from Salvador, Bahia, Brazil. My path started in audiovisual production and today it meets strategy. I like to investigate, observe people, understand cultural movements and connect different references to find new possibilities for brands and businesses."
+    ],
+    "link": "see my work"
+  },
+
+  "marcas": { "titulo": "brands I've walked with" },
+
+  "contato": {
+    "eyebrow": "contact",
+    "titulo": { "antes": "Shall we build something ", "destaque": "together?" },
+    "texto": "Good ideas start with encounters, exchanges and curiosity."
+  },
+
+  "estrategia": {
+    "menu": "strategy",
+    "intro": {
+      "eyebrow": "Work · Strategy",
+      "titulo": { "antes": "Every great strategy starts with ", "destaque": "good research." },
+      "paragrafos": [
+        "More than a professional path, the following projects show how my way of thinking, leading and turning strategy into business results has evolved."
+      ]
+    },
+    "blocos": [
+      { "cliente": "Stone", "titulo": "FAMPE", "texto": "Qualitative research, focus groups and investigation into the reality of women entrepreneurs." },
+      { "cliente": "Stone", "titulo": "Pulso Stone", "texto": "Curation of news, trends and industry movements." },
+      { "cliente": "Old Spice", "titulo": "Body Wash", "texto": "Research on men's habits, culture and behavior around bathing." },
+      { "cliente": "Ford", "titulo": "Agro Curation", "texto": "Curation of opinion leaders and references in agribusiness." },
+      { "cliente": "Centauro", "titulo": "Competitors", "texto": "Mystery shopping and investigation of the shopping experience and store differentiators." }
+    ]
+  },
+
+  "producao": {
+    "menu": "production",
+    "intro": {
+      "eyebrow": "Work · Audiovisual production",
+      "titulo": { "antes": "From idea ", "destaque": "to reality." },
+      "paragrafos": [
+        "Before working in strategy, I built my career in audiovisual and event production. That's where I developed my eye for the big picture and the ability to connect people, organize processes and turn ideas into deliverables."
+      ]
+    },
+    "blocos": [
+      { "cliente": "Festival", "titulo": "Feira Preta 2025", "texto": "Production leadership, team, communication and processes." },
+      { "cliente": "Lambão", "titulo": "Lambão Weekend 2025", "texto": "Field production, agility, attention to process and adaptability." }
+    ]
+  }
+}

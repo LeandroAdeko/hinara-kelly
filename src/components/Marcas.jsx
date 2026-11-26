@@ -1,4 +1,4 @@
-import { marcas } from '../data/conteudo'
+import { useConteudo } from '../i18n/Lingua'
 import { Reveal } from './ui'
 import './Marcas.css'
 
@@ -9,6 +9,7 @@ const url = (src) => import.meta.env.BASE_URL + src.replace(/^\//, '')
 // parecem do mesmo tamanho. Os logos são pintados com a cor do texto (máscara CSS),
 // assim combinam com a paleta e com o modo escuro.
 export default function Marcas() {
+  const { marcas } = useConteudo()
   return (
     <section className="secao marcas" id="marcas">
       <div className="wrap">

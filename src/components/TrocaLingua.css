@@ -1,0 +1,33 @@
+/* Mesmo contorno arredondado do botão claro/escuro */
+.troca-lingua {
+  position: relative;
+  z-index: 2; /* visível por cima do menu aberto no celular */
+  display: inline-flex;
+  border: 1.5px solid var(--linha);
+  border-radius: 999px;
+  padding: 2px;
+}
+
+.troca-lingua button {
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: var(--cinza);
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: background-color .2s, color .2s;
+}
+.troca-lingua button:hover { color: var(--preto); }
+.troca-lingua button.is-ativa {
+  background: var(--preenchimento);
+  color: var(--sobre-preenchimento);
+}
+.troca-lingua button:focus-visible { outline: 2px solid var(--amarelo); outline-offset: 2px; }
+
+@media (max-width: 400px) {
+  .troca-lingua button { padding: 4px 6px; font-size: 11px; }
+}

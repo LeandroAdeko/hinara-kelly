@@ -1,0 +1,80 @@
+{
+  "lingua": { "codigo": "es", "sigla": "ES", "nome": "Español", "ordem": 3 },
+
+  "ui": {
+    "descricao": "Inara Kelly do Carmo — Asistente de Estrategia y Productora Audiovisual. Cultura, investigación y producción.",
+    "menu": { "home": "inicio", "abrir": "Abrir menú", "fechar": "Cerrar menú" },
+    "idioma": { "rotulo": "Idioma del sitio", "trocar": "Ver el sitio en {lingua}" },
+    "modo": { "claro": "claro", "escuro": "oscuro", "descricao": "Modo {atual}. Haz clic para cambiar al modo {proximo}" },
+    "contato": { "email": "e-mail", "copiar": "copiar", "copiado": "copiado ✓" },
+    "trajetoria": {
+      "indice": "Proyectos de esta página",
+      "destaques": "Destacados:",
+      "frentes": "Áreas de actuación",
+      "vejaTambem": "ver también"
+    }
+  },
+
+  "cargo": "Asistente de Estrategia | Productora Audiovisual",
+
+  "citacao": {
+    "antes": "“Cuando un río se encuentra con otro río, no deja de ser río, ",
+    "destaque": "se convierte en un río más grande.”"
+  },
+
+  "hero": {
+    "abaixo": "Cultura, investigación y producción.",
+    "faixa": ["estrategia", "cultura", "producción", "investigación", "personas", "territorio"]
+  },
+
+  "sobre": {
+    "eyebrow": "Sobre mí",
+    "fotoAlt": "Inara Kelly do Carmo sonriendo, con aretes de aro, frente a una pared de ladrillos",
+    "titulo": { "antes": "Inara Kelly ", "destaque": "do Carmo" },
+    "paragrafos": [
+      "Soy Inara, de Salvador, Bahía, Brasil. Mi trayectoria pasa por la producción audiovisual y hoy se encuentra con la estrategia. Me gusta investigar, observar a las personas, entender los movimientos culturales y conectar diferentes referencias para encontrar nuevas posibilidades para marcas y negocios."
+    ],
+    "link": "conoce mis trabajos"
+  },
+
+  "marcas": { "titulo": "con quién he caminado" },
+
+  "contato": {
+    "eyebrow": "contacto",
+    "titulo": { "antes": "¿Construimos algo ", "destaque": "juntos?" },
+    "texto": "Las buenas ideas empiezan con encuentros, intercambios y curiosidad."
+  },
+
+  "estrategia": {
+    "menu": "estrategia",
+    "intro": {
+      "eyebrow": "Trabajos · Estrategia",
+      "titulo": { "antes": "Toda gran estrategia empieza con ", "destaque": "una buena investigación." },
+      "paragrafos": [
+        "Más que una trayectoria profesional, los siguientes proyectos muestran la evolución de mi forma de pensar, conducir y traducir la estrategia en resultados de negocio."
+      ]
+    },
+    "blocos": [
+      { "cliente": "Stone", "titulo": "FAMPE", "texto": "Investigación cualitativa, grupos focales e investigación de la realidad de mujeres emprendedoras." },
+      { "cliente": "Stone", "titulo": "Pulso Stone", "texto": "Curaduría de noticias, tendencias y movimientos de la industria." },
+      { "cliente": "Old Spice", "titulo": "Body Wash", "texto": "Investigación sobre hábitos, cultura y comportamiento masculino en relación con el baño." },
+      { "cliente": "Ford", "titulo": "Curaduría Agro", "texto": "Curaduría de líderes de opinión y referentes del agronegocio." },
+      { "cliente": "Centauro", "titulo": "Competencia", "texto": "Cliente oculto e investigación de la experiencia de compra y los diferenciales de tienda." }
+    ]
+  },
+
+  "producao": {
+    "menu": "producción",
+    "intro": {
+      "eyebrow": "Trabajos · Producción audiovisual",
+      "titulo": { "antes": "De la idea ", "destaque": "a la realización." },
+      "paragrafos": [
+        "Antes de trabajar en estrategia, construí mi trayectoria en la producción audiovisual y de eventos. En ese camino desarrollé mi mirada sobre el todo y la capacidad de conectar personas, organizar procesos y transformar ideas en entregas."
+      ]
+    },
+    "blocos": [
+      { "cliente": "Festival", "titulo": "Feira Preta 2025", "texto": "Liderazgo de producción, equipo, comunicación y procesos." },
+      { "cliente": "Lambão", "titulo": "Lambão Weekend 2025", "texto": "Producción de campo, agilidad, atención a los procesos y adaptabilidad." }
+    ]
+  }
+}

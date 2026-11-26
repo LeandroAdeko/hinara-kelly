@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
-import { sobre, trajetorias } from '../data/conteudo'
+import { useConteudo } from '../i18n/Lingua'
 import { Destaque, Foto, Reveal, TituloSecao } from './ui'
 import './Sobre.css'
 
 export default function Sobre() {
+  const { sobre, trajetorias } = useConteudo()
   return (
     <section className="secao sobre" id="sobre">
       <div className="wrap sobre__inner">

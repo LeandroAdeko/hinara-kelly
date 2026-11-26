@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { trajetorias } from '../data/conteudo'
+import { MOSTRAR_BOTAO_LINGUA, useConteudo } from '../i18n/Lingua'
 import TrocaPaleta from './TrocaPaleta'
 import TrocaModo from './TrocaModo'
+import TrocaLingua from './TrocaLingua'
 import SeletorFonte from './SeletorFonte'
 
 import './Nav.css'
@@ -17,6 +18,7 @@ const MOSTRAR_BOTAO_PALETA = false
 const MOSTRAR_BOTAO_FONTE = false
 
 export default function Nav() {
+  const { trajetorias, ui } = useConteudo()
   const [aberto, setAberto] = useState(false)
   const [rolou, setRolou] = useState(false)
 
@@ -42,13 +44,14 @@ export default function Nav() {
 
         <div className="nav__acoes">
           <ul className={`nav__links ${aberto ? 'is-open' : ''}`}>
-            <li><NavLink to="/" end onClick={fechar}>home</NavLink></li>
+            <li><NavLink to="/" end onClick={fechar}>{ui.menu.home}</NavLink></li>
             {trajetorias.map((t) => (
               <li key={t.rota}><NavLink to={t.rota} onClick={fechar}>{t.menu}</NavLink></li>
             ))}
           </ul>
 
           <div className="nav__preferencias">
+            {MOSTRAR_BOTAO_LINGUA && <TrocaLingua />}
             <TrocaModo />
             {MOSTRAR_BOTAO_PALETA && <TrocaPaleta />}
             {MOSTRAR_BOTAO_FONTE && <SeletorFonte />}
@@ -56,7 +59,7 @@ export default function Nav() {
 
           <button
             className={`nav__burger ${aberto ? 'is-open' : ''}`}
-            aria-label={aberto ? 'Fechar menu' : 'Abrir menu'}
+            aria-label={aberto ? ui.menu.fechar : ui.menu.abrir}
             aria-expanded={aberto}
             onClick={() => setAberto((v) => !v)}
           >

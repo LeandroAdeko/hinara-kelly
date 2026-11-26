@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react'
+import { preencher, useConteudo } from '../i18n/Lingua'
 import './TrocaPaleta.css'
 
-const MODOS = {
-  claro: { nome: 'claro', proximo: 'escuro' },
-  escuro: { nome: 'escuro', proximo: 'claro' },
-}
+const PROXIMO = { claro: 'escuro', escuro: 'claro' }
 
 const consulta = () => window.matchMedia('(prefers-color-scheme: dark)')
 const modoDoSistema = () => (consulta().matches ? 'escuro' : 'claro')
@@ -29,9 +27,10 @@ function Icone({ modo }) {
 // Botão claro/escuro. Começa sempre no modo do sistema; o clique alterna
 // só durante a visita (ao abrir o site de novo, volta a seguir o sistema).
 export default function TrocaModo() {
+  const { ui } = useConteudo()
   const [modo, setModo] = useState(modoDoSistema)
   const [escolheu, setEscolheu] = useState(false)
-  const proximo = MODOS[modo].proximo
+  const proximo = PROXIMO[modo]
 
   useEffect(() => {
     document.documentElement.dataset.modo = modo
@@ -51,7 +50,8 @@ export default function TrocaModo() {
     setModo(proximo)
   }
 
-  const descricao = `Modo ${MODOS[modo].nome}. Clique para mudar para o modo ${MODOS[proximo].nome}`
+  // os nomes "claro"/"escuro" e a frase vêm de ui.modo nos JSONs de src/locales/
+  const descricao = preencher(ui.modo.descricao, { atual: ui.modo[modo], proximo: ui.modo[proximo] })
 
   return (
     <button
@@ -62,7 +62,7 @@ export default function TrocaModo() {
       title={descricao}
     >
       <Icone modo={modo} />
-      <span className="troca-paleta__nome">{MODOS[modo].nome}</span>
+      <span className="troca-paleta__nome">{ui.modo[modo]}</span>
     </button>
   )
 }

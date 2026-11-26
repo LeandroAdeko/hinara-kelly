@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="44 44 660 110" role="img" aria-label="mmova">
+  <!-- Redesenho em vetor do logo da mmova (traço fino, "o" e "a" preenchidos) -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="13" stroke-linejoin="round">
+    <path d="M56.5 148V50M56.5 92C56.5 69 71 56.5 90.5 56.5S124.5 69 124.5 92V148M124.5 92C124.5 69 139 56.5 158.5 56.5S192.5 69 192.5 92V148"/>
+    <path d="M222.5 148V50M222.5 92C222.5 69 237 56.5 256.5 56.5S290.5 69 290.5 92V148M290.5 92C290.5 69 305 56.5 324.5 56.5S358.5 69 358.5 92V148"/>
+    <path d="M487 52L535 145L583 52"/>
+  </g>
+  <g fill="#FFFFFF">
+    <circle cx="420" cy="99" r="49"/>
+    <circle cx="643" cy="99" r="49"/>
+    <rect x="685" y="50" width="14" height="98"/>
+  </g>
+</svg>

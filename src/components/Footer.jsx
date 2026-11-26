@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import { contato, perfil } from '../data/conteudo'
+import { useConteudo } from '../i18n/Lingua'
 import { Destaque } from './ui'
 import './Footer.css'
 
 export default function Footer() {
+  const { contato, perfil, ui } = useConteudo()
   const [copiado, setCopiado] = useState(false)
 
   const copiar = async () => {
@@ -28,10 +29,10 @@ export default function Footer() {
 
           <ul className="footer__contatos">
             <li>
-              <span className="footer__rotulo">e-mail</span>
+              <span className="footer__rotulo">{ui.contato.email}</span>
               <a href={`mailto:${perfil.email}`}>{perfil.email}</a>
               <button type="button" className="footer__copiar" onClick={copiar}>
-                {copiado ? 'copiado ✓' : 'copiar'}
+                {copiado ? ui.contato.copiado : ui.contato.copiar}
               </button>
             </li>
             <li>

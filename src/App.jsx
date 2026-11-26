@@ -4,7 +4,7 @@ import Nav from './components/Nav'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import TrajetoriaPagina from './pages/TrajetoriaPagina'
-import { estrategia, producao } from './data/conteudo'
+import { useConteudo } from './i18n/Lingua'
 
 // Volta ao topo sempre que muda de página.
 function ScrollToTop() {
@@ -14,6 +14,7 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  const { estrategia, producao } = useConteudo()
   return (
     <>
       <ScrollToTop />

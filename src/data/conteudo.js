@@ -1,137 +1,59 @@
-// Todo o texto do site fica aqui. Para trocar uma foto, coloque o arquivo em
-// public/fotos/ e preencha o campo `src` (ex.: '/fotos/retrato.jpg').
+// Os TEXTOS do site ficam em src/locales/ (um JSON por língua: pt.json, en.json, es.json).
+// Aqui fica só o que é igual em todas as línguas (nome, contatos, fotos, logos, endereços
+// das páginas) e a função que junta essas informações com os textos da língua escolhida.
+//
+// Listas (palavras da faixa, projetos das páginas de trabalhos, parágrafos) são lidas
+// direto do JSON: para incluir um item, basta adicioná-lo à lista em cada língua.
+// A numeração (01, 02...) e o índice da página se ajustam sozinhos.
 
 export const perfil = {
   nome: ['INARA KELLY', 'DO CARMO'],
   nomeCompleto: 'Inara Kelly do Carmo',
-  cargo: 'Assistente de Estratégia | Produtora Audiovisual',
   email: 'inarissima@gmail.com',
   instagram: 'inarissima',
   linkedin: { url: 'https://www.linkedin.com/in/inarissima/', rotulo: '/in/inarissima/' },
 }
 
-// Citação usada na home (hero e sobre)
-export const citacao = {
-  antes: '“Quando um rio encontra um outro rio, ele não deixa de ser rio, ',
-  destaque: 'ele se torna um rio maior.”',
+// Foto da seção sobre. Para trocar, coloque o arquivo em public/fotos/.
+const foto = {
+  src: '/fotos/inara-retrato.jpg',
+  posicao: '52% 30%', // enquadramento: centraliza o rosto
 }
 
-/* ---------- HOME ---------- */
-
-export const hero = {
-  acima: perfil.cargo,
-  abaixo: 'Cultura, pesquisa e produção.',
-  frase: citacao,
-  // Palavras que correm na faixa amarela
-  faixa: ['estratégia', 'cultura', 'produção', 'investigação', 'pessoas', 'território'],
-}
-
-export const sobre = {
-  eyebrow: 'Sobre',
-  foto: {
-    src: '/fotos/inara-retrato.jpg',
-    alt: 'Inara Kelly do Carmo sorrindo, de brincos de argola, em frente a uma parede de tijolos',
-    legenda: 'foto da Inara',
-    posicao: '52% 30%', // enquadramento: centraliza o rosto
-  },
-  titulo: { antes: 'Inara Kelly ', destaque: 'do Carmo' },
-  cargo: perfil.cargo,
-  citacao,
-  paragrafos: [
-    'Sou Inara, de Salvador, Bahia. Minha trajetória passa pela produção audiovisual e hoje se encontra na estratégia. Gosto de investigar, observar pessoas, entender movimentos culturais e conectar diferentes referências para encontrar novas possibilidades para marcas e negócios.',
-  ],
-  link: 'conheça meus trabalhos',
-}
-
-// Nuvem de marcas (logo abaixo da seção sobre). Os arquivos ficam em public/marcas/
+// Nuvem de marcas (abaixo da seção sobre). Os arquivos ficam em public/marcas/
 // e precisam ter fundo transparente: o site pinta todos na cor do texto.
 // `proporcao` = largura ÷ altura do arquivo; serve para deixar todas com tamanho
 // visual parecido. `escala` (opcional) ajusta à mão uma marca que pareça grande demais.
-export const marcas = {
-  // Título único, no mesmo estilo dos rótulos pequenos (ex.: "sobre", "contato")
-  titulo: 'com quem já caminhei',
-  lista: [
-    { nome: 'VML', src: '/marcas/vml.svg', proporcao: 3.26 },
-    { nome: 'Favela Filmes', src: '/marcas/favela-filmes-original-transparente.png', proporcao: 1.82, escala: 1.1 },
-    { nome: 'Wieden+Kennedy', src: '/marcas/wieden-kennedy.svg', proporcao: 2.24 },
-    { nome: 'Wakanda Educação Empreendedora', src: '/marcas/wakanda-simbolo.png', proporcao: 1, escala: 0.8 },
-    { nome: 'YouPix', src: '/marcas/youpix.png', proporcao: 2.97 },
-    { nome: 'VVAMO (antiga mmova)', src: '/marcas/vvamo.svg', proporcao: 4.33 },
-  ],
+const logos = [
+  { nome: 'VML', src: '/marcas/vml.svg', proporcao: 3.26 },
+  { nome: 'Favela Filmes', src: '/marcas/favela-filmes-original-transparente.png', proporcao: 1.82, escala: 1.1 },
+  { nome: 'Wieden+Kennedy', src: '/marcas/wieden-kennedy.svg', proporcao: 2.24 },
+  { nome: 'Wakanda Educação Empreendedora', src: '/marcas/wakanda-simbolo.png', proporcao: 1, escala: 0.8 },
+  { nome: 'YouPix', src: '/marcas/youpix.png', proporcao: 2.97 },
+  { nome: 'mmova', src: '/marcas/mmova.svg', proporcao: 6, escala: 1.1 },
+]
+
+// Endereços das páginas de trabalhos (iguais em todas as línguas)
+export const rotas = { estrategia: '/estrategia', producao: '/producao' }
+
+// Junta os textos de uma língua (o JSON) com os dados fixos acima.
+export function montarConteudo(t) {
+  const estrategia = { ...t.estrategia, id: 'estrategia', rota: rotas.estrategia }
+  const producao = { ...t.producao, id: 'producao', rota: rotas.producao }
+  return {
+    ui: t.ui,
+    perfil: { ...perfil, cargo: t.cargo },
+    hero: { acima: t.cargo, abaixo: t.hero.abaixo, frase: t.citacao, faixa: t.hero.faixa },
+    sobre: {
+      ...t.sobre,
+      foto: { ...foto, alt: t.sobre.fotoAlt, legenda: t.sobre.fotoAlt },
+      cargo: t.cargo,
+      citacao: t.citacao,
+    },
+    marcas: { titulo: t.marcas.titulo, lista: logos },
+    contato: t.contato,
+    estrategia,
+    producao,
+    trajetorias: [estrategia, producao],
+  }
 }
-
-export const contato = {
-  eyebrow: 'contato',
-  titulo: { antes: 'Vamos construir algo ', destaque: 'juntos?' },
-  texto: 'Boas ideias começam com encontros, trocas e curiosidade.',
-}
-
-/* ---------- TRABALHOS ----------
-   Duas páginas com o mesmo formato. Cada bloco tem:
-   cliente (linha pequena acima do título), titulo e texto.
-   Opcionais: destaques (lista) e frentes (etiquetas). */
-
-export const estrategia = {
-  rota: '/estrategia',
-  menu: 'estratégia',
-  intro: {
-    eyebrow: 'Trabalhos · Estratégia',
-    titulo: { antes: 'Toda grande estratégia começa por ', destaque: 'uma boa investigação.' },
-    paragrafos: [
-      'Mais do que trajetória profissional, os projetos a seguir materializam a evolução do meu jeito de pensar, conduzir, e traduzir estratégia em resultado de negócio.',
-    ],
-  },
-  blocos: [
-    {
-      cliente: 'Stone',
-      titulo: 'FAMPE',
-      texto: 'Pesquisa qualitativa, grupo focal e investigação da realidade de empreendedoras.',
-    },
-    {
-      cliente: 'Stone',
-      titulo: 'Pulso Stone',
-      texto: 'Curadoria de notícias, tendências e movimentos da indústria.',
-    },
-    {
-      cliente: 'Old Spice',
-      titulo: 'Body Wash',
-      texto: 'Pesquisa sobre hábitos, cultura e comportamento masculino em relação ao banho.',
-    },
-    {
-      cliente: 'Ford',
-      titulo: 'Curadoria Agro',
-      texto: 'Curadoria de formadores de opinião e referências do agronegócio.',
-    },
-    {
-      cliente: 'Centauro',
-      titulo: 'Concorrência',
-      texto: 'Cliente oculto e investigação da experiência de compra e diferenciais de loja.',
-    },
-  ],
-}
-
-export const producao = {
-  rota: '/producao',
-  menu: 'produção',
-  intro: {
-    eyebrow: 'Trabalhos · Produção audiovisual',
-    titulo: { antes: 'Da ideia ', destaque: 'à realização.' },
-    paragrafos: [
-      'Antes de atuar em estratégia, construí minha trajetória na produção audiovisual e de eventos. Foi nesse caminho que desenvolvi meu olhar para o todo, a capacidade de conectar pessoas, organizar processos e transformar ideias em entregas.',
-    ],
-  },
-  blocos: [
-    {
-      cliente: 'Festival',
-      titulo: 'Feira Preta 2025',
-      texto: 'Liderança de produção, equipe, comunicação e processos.',
-    },
-    {
-      cliente: 'Lambão',
-      titulo: 'Lambão Weekend 2025',
-      texto: 'Produção de campo, agilidade, atenção aos processos e adaptabilidade.',
-    },
-  ],
-}
-
-export const trajetorias = [estrategia, producao]
