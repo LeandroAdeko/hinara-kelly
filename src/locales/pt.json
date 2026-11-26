@@ -32,7 +32,13 @@
       "frentes": "Frentes de atuação",
       "vejaTambem": "veja também",
       "funcao": "Função:",
-      "video": "Assistir ao vídeo de {titulo}"
+      "video": "Assistir ao vídeo de {titulo}",
+      "galeria": {
+        "ampliar": "Ampliar imagem",
+        "fechar": "Fechar",
+        "anterior": "Imagem anterior",
+        "proxima": "Próxima imagem"
+      }
     }
   },
   "cargo": "Assistente de Estratégia | Produtora Audiovisual",
@@ -88,27 +94,70 @@
       {
         "cliente": "Stone",
         "titulo": "FAMPE",
-        "texto": "Direcionamento estratégico na Blast para comunicar crédito a microempreendedoras, com pesquisa qualitativa, formulário e grupo focal no WhatsApp para gerar insumos para a criação."
+        "texto": "Direcionamento estratégico na Blast para comunicar crédito a microempreendedoras, com pesquisa qualitativa, formulário e grupo focal no WhatsApp para gerar insumos para a criação.",
+        "imagens": [
+          {
+            "src": "/estrategia/fampe-chega-de-pisar-em-ovos.jpg",
+            "alt": "Peça da campanha Stone FAMPE Mulher: \"Chega de pisar em ovos pra pedir crédito.\""
+          },
+          {
+            "src": "/estrategia/fampe-credito-sem-tropecos.jpg",
+            "alt": "Peça da campanha Stone FAMPE Mulher: \"Crédito sem tropeços.\""
+          }
+        ]
       },
       {
         "cliente": "Stone",
         "titulo": "Pulso Stone",
-        "texto": "Curadoria de notícias, tendências e movimentos da indústria."
+        "texto": "Curadoria de notícias, tendências e movimentos da indústria.",
+        "imagens": [
+          {
+            "src": "/estrategia/pulso-stone-newsletter.jpg",
+            "alt": "Newsletter Pulso Stone com a curadoria semanal de movimentos do mercado",
+            "recorte": "50% 0%"
+          }
+        ]
       },
       {
         "cliente": "Old Spice",
         "titulo": "Body Wash",
-        "texto": "Desk research e social listening sobre a relação do homem mexicano com o banho, para chegar à oportunidade: Old Spice transforma qualquer banho ordinário em lendário."
+        "texto": "Desk research e social listening sobre a relação do homem mexicano com o banho, para chegar à oportunidade: Old Spice transforma qualquer banho ordinário em lendário.",
+        "imagens": [
+          {
+            "src": "/estrategia/old-spice-pesquisa.jpg",
+            "alt": "Slide de pesquisa: as principais preocupações do mexicano com o banho"
+          },
+          {
+            "src": "/estrategia/old-spice-insight.jpg",
+            "alt": "Slide de insight: \"He saves his best shower for the moments he knows will matter\""
+          }
+        ]
       },
       {
         "cliente": "Ford",
         "titulo": "Curadoria Agro",
-        "texto": "Benchmark para a curadoria de influenciadores e formadores de opinião do agronegócio, em parceria com a W+K Argentina, para um evento da marca."
+        "texto": "Benchmark para a curadoria de influenciadores e formadores de opinião do agronegócio, em parceria com a W+K Argentina, para um evento da marca.",
+        "imagens": [
+          {
+            "src": "/estrategia/ford-curadoria-agro.jpg",
+            "alt": "Slides da curadoria de especialistas do agronegócio para o workshop Ford Agro"
+          }
+        ]
       },
       {
         "cliente": "Centauro",
         "titulo": "Concorrência",
-        "texto": "Participei da concorrência com investigação de cliente oculto: visitei lojas, observei pontos de contato e conversei com equipes para mapear os diferenciais da experiência presencial."
+        "texto": "Participei da concorrência com investigação de cliente oculto: visitei lojas, observei pontos de contato e conversei com equipes para mapear os diferenciais da experiência presencial.",
+        "imagens": [
+          {
+            "src": "/estrategia/centauro-loja.jpg",
+            "alt": "Loja Centauro: \"a loja é, em si, um trigger que desperta o interesse pelo mundo esportivo\""
+          },
+          {
+            "src": "/estrategia/centauro-descoberta.jpg",
+            "alt": "Descoberta do cliente oculto: um vendedor que desperta idosos do bairro para a corrida"
+          }
+        ]
       }
     ]
   },

@@ -32,7 +32,13 @@
       "frentes": "Areas of work",
       "vejaTambem": "see also",
       "funcao": "Role:",
-      "video": "Watch the {titulo} video"
+      "video": "Watch the {titulo} video",
+      "galeria": {
+        "ampliar": "Enlarge image",
+        "fechar": "Close",
+        "anterior": "Previous image",
+        "proxima": "Next image"
+      }
     }
   },
   "cargo": "Strategy Assistant | Audiovisual Producer",
@@ -88,27 +94,70 @@
       {
         "cliente": "Stone",
         "titulo": "FAMPE",
-        "texto": "Strategic direction at Blast to communicate credit to women micro-entrepreneurs, with qualitative research, a survey and a WhatsApp focus group to generate insights for the creative team."
+        "texto": "Strategic direction at Blast to communicate credit to women micro-entrepreneurs, with qualitative research, a survey and a WhatsApp focus group to generate insights for the creative team.",
+        "imagens": [
+          {
+            "src": "/estrategia/fampe-chega-de-pisar-em-ovos.jpg",
+            "alt": "Stone FAMPE Mulher campaign piece: \"Chega de pisar em ovos pra pedir crédito.\""
+          },
+          {
+            "src": "/estrategia/fampe-credito-sem-tropecos.jpg",
+            "alt": "Stone FAMPE Mulher campaign piece: \"Crédito sem tropeços.\""
+          }
+        ]
       },
       {
         "cliente": "Stone",
         "titulo": "Pulso Stone",
-        "texto": "Curation of news, trends and industry movements."
+        "texto": "Curation of news, trends and industry movements.",
+        "imagens": [
+          {
+            "src": "/estrategia/pulso-stone-newsletter.jpg",
+            "alt": "Pulso Stone newsletter with the weekly roundup of market movements",
+            "recorte": "50% 0%"
+          }
+        ]
       },
       {
         "cliente": "Old Spice",
         "titulo": "Body Wash",
-        "texto": "Desk research and social listening on Mexican men's relationship with bathing, leading to the opportunity: Old Spice turns any ordinary shower into a legendary one."
+        "texto": "Desk research and social listening on Mexican men's relationship with bathing, leading to the opportunity: Old Spice turns any ordinary shower into a legendary one.",
+        "imagens": [
+          {
+            "src": "/estrategia/old-spice-pesquisa.jpg",
+            "alt": "Research slide: Mexican men's main concerns about showering"
+          },
+          {
+            "src": "/estrategia/old-spice-insight.jpg",
+            "alt": "Insight slide: \"He saves his best shower for the moments he knows will matter\""
+          }
+        ]
       },
       {
         "cliente": "Ford",
         "titulo": "Agro Curation",
-        "texto": "Benchmark for curating agribusiness influencers and opinion leaders, in partnership with W+K Argentina, for a brand event."
+        "texto": "Benchmark for curating agribusiness influencers and opinion leaders, in partnership with W+K Argentina, for a brand event.",
+        "imagens": [
+          {
+            "src": "/estrategia/ford-curadoria-agro.jpg",
+            "alt": "Slides from the agribusiness expert curation for the Ford Agro workshop"
+          }
+        ]
       },
       {
         "cliente": "Centauro",
         "titulo": "Competitors",
-        "texto": "I took part in the pitch with mystery shopping: I visited stores, observed touchpoints and talked to staff to map what sets the in-store experience apart."
+        "texto": "I took part in the pitch with mystery shopping: I visited stores, observed touchpoints and talked to staff to map what sets the in-store experience apart.",
+        "imagens": [
+          {
+            "src": "/estrategia/centauro-loja.jpg",
+            "alt": "Centauro store: \"the store itself is a trigger that sparks interest in sports\""
+          },
+          {
+            "src": "/estrategia/centauro-descoberta.jpg",
+            "alt": "Mystery shopping finding: a salesperson who gets older neighbors into running"
+          }
+        ]
       }
     ]
   },

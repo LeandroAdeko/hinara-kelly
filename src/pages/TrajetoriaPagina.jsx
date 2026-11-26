@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { preencher, useConteudo } from '../i18n/Lingua'
 import { Reveal, TituloSecao } from '../components/ui'
 import Video from '../components/Video'
+import Galeria from '../components/Galeria'
 import './TrajetoriaPagina.css'
 
 // Página de trajetória reaproveitada por Estratégia e Produção.
@@ -53,6 +54,7 @@ export default function TrajetoriaPagina({ dados }) {
               {b.video && (
                 <Video id={b.video} titulo={preencher(ui.trajetoria.video, { titulo: b.titulo })} />
               )}
+              {b.imagens?.length > 0 && <Galeria imagens={b.imagens} />}
               {b.destaques && (
                 <>
                   <p className="traj-bloco__rotulo">{ui.trajetoria.destaques}</p>
