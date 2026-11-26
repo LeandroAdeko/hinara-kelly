@@ -140,3 +140,8 @@
   .traj-bloco__cabeca { position: static; }
   .traj-blocos { padding-bottom: 72px; }
 }
+
+/* "Função: ..." abaixo do texto do projeto */
+.traj-bloco__funcao { margin-top: 18px; font-size: 15px; color: var(--cinza); }
+.traj-bloco__funcao span { font-weight: 700; color: var(--amarelo); margin-right: 4px; }
+.traj-bloco__texto + .traj-bloco__texto { margin-top: 16px; }

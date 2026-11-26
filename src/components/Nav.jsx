@@ -39,7 +39,7 @@ export default function Nav() {
     <nav className={`nav ${rolou ? 'nav--rolou' : ''}`}>
       <div className="wrap nav__inner">
         <Link to="/" className="nav__logo" onClick={fechar}>
-          inara<span>.</span>
+          inaríssima<span>.</span>
         </Link>
 
         <div className="nav__acoes">

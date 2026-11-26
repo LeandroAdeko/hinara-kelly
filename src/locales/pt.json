@@ -1,80 +1,180 @@
 {
-  "lingua": { "codigo": "pt-BR", "sigla": "PT", "nome": "Português", "ordem": 1 },
-
+  "lingua": {
+    "codigo": "pt-BR",
+    "sigla": "PT",
+    "nome": "Português",
+    "ordem": 1
+  },
   "ui": {
     "descricao": "Inara Kelly do Carmo — Assistente de Estratégia e Produtora Audiovisual. Cultura, pesquisa e produção.",
-    "menu": { "home": "home", "abrir": "Abrir menu", "fechar": "Fechar menu" },
-    "idioma": { "rotulo": "Idioma do site", "trocar": "Ver o site em {lingua}" },
-    "modo": { "claro": "claro", "escuro": "escuro", "descricao": "Modo {atual}. Clique para mudar para o modo {proximo}" },
-    "contato": { "email": "e-mail", "copiar": "copiar", "copiado": "copiado ✓" },
+    "menu": {
+      "home": "home",
+      "abrir": "Abrir menu",
+      "fechar": "Fechar menu"
+    },
+    "idioma": {
+      "rotulo": "Idioma do site",
+      "trocar": "Ver o site em {lingua}"
+    },
+    "modo": {
+      "claro": "claro",
+      "escuro": "escuro",
+      "descricao": "Modo {atual}. Clique para mudar para o modo {proximo}"
+    },
+    "contato": {
+      "email": "e-mail",
+      "copiar": "copiar",
+      "copiado": "copiado ✓"
+    },
     "trajetoria": {
       "indice": "Projetos desta página",
       "destaques": "Destaques:",
       "frentes": "Frentes de atuação",
-      "vejaTambem": "veja também"
+      "vejaTambem": "veja também",
+      "funcao": "Função:",
+      "video": "Assistir ao vídeo de {titulo}"
     }
   },
-
   "cargo": "Assistente de Estratégia | Produtora Audiovisual",
-
   "citacao": {
     "antes": "“Quando um rio encontra um outro rio, ele não deixa de ser rio, ",
     "destaque": "ele se torna um rio maior.”"
   },
-
   "hero": {
     "abaixo": "Cultura, pesquisa e produção.",
-    "faixa": ["estratégia", "cultura", "produção", "investigação", "pessoas", "território"]
+    "faixa": [
+      "estratégia",
+      "cultura",
+      "produção",
+      "investigação",
+      "pessoas",
+      "território"
+    ]
   },
-
   "sobre": {
     "eyebrow": "Sobre",
     "fotoAlt": "Inara Kelly do Carmo sorrindo, de brincos de argola, em frente a uma parede de tijolos",
-    "titulo": { "antes": "Inara Kelly ", "destaque": "do Carmo" },
-    "paragrafos": [
-      "Sou Inara, de Salvador, Bahia. Minha trajetória passa pela produção audiovisual e hoje se encontra na estratégia. Gosto de investigar, observar pessoas, entender movimentos culturais e conectar diferentes referências para encontrar novas possibilidades para marcas e negócios."
-    ],
+    "titulo": {
+      "antes": "Inara Kelly ",
+      "destaque": "do Carmo"
+    },
+    "paragrafos": [],
     "link": "conheça meus trabalhos"
   },
-
-  "marcas": { "titulo": "com quem já caminhei" },
-
+  "marcas": {
+    "titulo": "com quem já caminhei"
+  },
   "contato": {
     "eyebrow": "contato",
-    "titulo": { "antes": "Vamos construir algo ", "destaque": "juntos?" },
+    "titulo": {
+      "antes": "Vamos construir algo ",
+      "destaque": "juntos?"
+    },
     "texto": "Boas ideias começam com encontros, trocas e curiosidade."
   },
-
   "estrategia": {
     "menu": "estratégia",
     "intro": {
       "eyebrow": "Trabalhos · Estratégia",
-      "titulo": { "antes": "Toda grande estratégia começa por ", "destaque": "uma boa investigação." },
+      "titulo": {
+        "antes": "Toda grande estratégia começa por ",
+        "destaque": "uma boa investigação."
+      },
       "paragrafos": [
         "Mais do que trajetória profissional, os projetos a seguir materializam a evolução do meu jeito de pensar, conduzir, e traduzir estratégia em resultado de negócio."
       ]
     },
     "blocos": [
-      { "cliente": "Stone", "titulo": "FAMPE", "texto": "Pesquisa qualitativa, grupo focal e investigação da realidade de empreendedoras." },
-      { "cliente": "Stone", "titulo": "Pulso Stone", "texto": "Curadoria de notícias, tendências e movimentos da indústria." },
-      { "cliente": "Old Spice", "titulo": "Body Wash", "texto": "Pesquisa sobre hábitos, cultura e comportamento masculino em relação ao banho." },
-      { "cliente": "Ford", "titulo": "Curadoria Agro", "texto": "Curadoria de formadores de opinião e referências do agronegócio." },
-      { "cliente": "Centauro", "titulo": "Concorrência", "texto": "Cliente oculto e investigação da experiência de compra e diferenciais de loja." }
+      {
+        "cliente": "Stone",
+        "titulo": "FAMPE",
+        "texto": "Direcionamento estratégico na Blast para comunicar crédito a microempreendedoras, com pesquisa qualitativa, formulário e grupo focal no WhatsApp para gerar insumos para a criação."
+      },
+      {
+        "cliente": "Stone",
+        "titulo": "Pulso Stone",
+        "texto": "Curadoria de notícias, tendências e movimentos da indústria."
+      },
+      {
+        "cliente": "Old Spice",
+        "titulo": "Body Wash",
+        "texto": "Desk research e social listening sobre a relação do homem mexicano com o banho, para chegar à oportunidade: Old Spice transforma qualquer banho ordinário em lendário."
+      },
+      {
+        "cliente": "Ford",
+        "titulo": "Curadoria Agro",
+        "texto": "Benchmark para a curadoria de influenciadores e formadores de opinião do agronegócio, em parceria com a W+K Argentina, para um evento da marca."
+      },
+      {
+        "cliente": "Centauro",
+        "titulo": "Concorrência",
+        "texto": "Participei da concorrência com investigação de cliente oculto: visitei lojas, observei pontos de contato e conversei com equipes para mapear os diferenciais da experiência presencial."
+      }
     ]
   },
-
   "producao": {
     "menu": "produção",
     "intro": {
       "eyebrow": "Trabalhos · Produção audiovisual",
-      "titulo": { "antes": "Da ideia ", "destaque": "à realização." },
+      "titulo": {
+        "antes": "Da ideia ",
+        "destaque": "à realização."
+      },
       "paragrafos": [
         "Antes de atuar em estratégia, construí minha trajetória na produção audiovisual e de eventos. Foi nesse caminho que desenvolvi meu olhar para o todo, a capacidade de conectar pessoas, organizar processos e transformar ideias em entregas."
       ]
     },
     "blocos": [
-      { "cliente": "Festival", "titulo": "Feira Preta 2025", "texto": "Liderança de produção, equipe, comunicação e processos." },
-      { "cliente": "Lambão", "titulo": "Lambão Weekend 2025", "texto": "Produção de campo, agilidade, atenção aos processos e adaptabilidade." }
+      {
+        "cliente": "Audiovisual · 2026",
+        "titulo": "Festival Feira Preta RJ",
+        "texto": "Dirigi a produção da cobertura audiovisual do festival no Rio de Janeiro, com equipe local, entregas em tempo real e aftermovie.",
+        "funcao": "Direção de produção",
+        "video": "PWVqcHaKwPE"
+      },
+      {
+        "cliente": "Audiovisual · 2026",
+        "titulo": "Open Bar de Beijo — Banda Eva",
+        "texto": "Produção de base no Carnaval de Salvador, liderando a operação de campo e a logística em tempo real.",
+        "funcao": "Produção de base",
+        "video": "9pB3RQ4dnV4"
+      },
+      {
+        "cliente": "Audiovisual · 2025",
+        "titulo": "Lambão Weekend — Psirico",
+        "texto": "Produção de base junto à direção de fotografia durante três dias de gravação em Itapuã, alinhando direção, câmera e set.",
+        "funcao": "Produção de base"
+      },
+      {
+        "cliente": "Audiovisual · 2025",
+        "titulo": "Rádio Bahia FM — “Coladinho em Você”",
+        "texto": [
+          "Com o propósito de repaginar o clipe “Tô Ligado” da Rádio Bahia FM, atuei como corroteirista e na direção de produção, unindo minha expertise criativa à gestão de processos.",
+          "Na pré-produção, conduzi a pesquisa, o briefing e o desenvolvimento do roteiro. Na execução, minha visão 360º de planejamento e gestão de logística garantiu que o projeto fluísse de forma eficiente, coordenando equipes e fornecedores para que a narrativa do roteiro ganhasse vida.",
+          "O resultado foi a execução completa e bem-sucedida do projeto, demonstrando minha habilidade em planejamento estratégico, gestão e coordenação de ponta a ponta."
+        ],
+        "funcao": "Líder de produção",
+        "video": "/videos/bahia-fm-coladinho-em-voce.mp4"
+      },
+      {
+        "cliente": "Eventos · 2025",
+        "titulo": "Feira Preta Festival Salvador",
+        "texto": "Liderei a produção da cobertura audiovisual da primeira edição do festival em Salvador, com equipe local, entregas em tempo real e aftermovie.",
+        "funcao": "Líder de produção",
+        "video": "GRio5m2RiwM"
+      },
+      {
+        "cliente": "Eventos · 2025",
+        "titulo": "World Creativity Day Salvador",
+        "texto": "Co-liderança e estratégia de comunicação, integrando equipes e logística em vários espaços simultâneos.",
+        "funcao": "Estratégia de comunicação e liderança"
+      },
+      {
+        "cliente": "Campanhas · 2026",
+        "titulo": "Escola Rambrandt",
+        "texto": "Produção de base e de set em três dias de gravação da campanha institucional, apoiando a organização das diárias e as demandas em tempo real.",
+        "funcao": "Produção de base"
+      }
     ]
   }
 }

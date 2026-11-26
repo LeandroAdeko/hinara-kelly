@@ -1,80 +1,180 @@
 {
-  "lingua": { "codigo": "en", "sigla": "EN", "nome": "English", "ordem": 2 },
-
+  "lingua": {
+    "codigo": "en",
+    "sigla": "EN",
+    "nome": "English",
+    "ordem": 2
+  },
   "ui": {
     "descricao": "Inara Kelly do Carmo — Strategy Assistant and Audiovisual Producer. Culture, research and production.",
-    "menu": { "home": "home", "abrir": "Open menu", "fechar": "Close menu" },
-    "idioma": { "rotulo": "Site language", "trocar": "View the site in {lingua}" },
-    "modo": { "claro": "light", "escuro": "dark", "descricao": "{atual} mode. Click to switch to {proximo} mode" },
-    "contato": { "email": "e-mail", "copiar": "copy", "copiado": "copied ✓" },
+    "menu": {
+      "home": "home",
+      "abrir": "Open menu",
+      "fechar": "Close menu"
+    },
+    "idioma": {
+      "rotulo": "Site language",
+      "trocar": "View the site in {lingua}"
+    },
+    "modo": {
+      "claro": "light",
+      "escuro": "dark",
+      "descricao": "{atual} mode. Click to switch to {proximo} mode"
+    },
+    "contato": {
+      "email": "e-mail",
+      "copiar": "copy",
+      "copiado": "copied ✓"
+    },
     "trajetoria": {
       "indice": "Projects on this page",
       "destaques": "Highlights:",
       "frentes": "Areas of work",
-      "vejaTambem": "see also"
+      "vejaTambem": "see also",
+      "funcao": "Role:",
+      "video": "Watch the {titulo} video"
     }
   },
-
   "cargo": "Strategy Assistant | Audiovisual Producer",
-
   "citacao": {
     "antes": "“When a river meets another river, it doesn't stop being a river, ",
     "destaque": "it becomes a bigger river.”"
   },
-
   "hero": {
     "abaixo": "Culture, research and production.",
-    "faixa": ["strategy", "culture", "production", "research", "people", "territory"]
+    "faixa": [
+      "strategy",
+      "culture",
+      "production",
+      "research",
+      "people",
+      "territory"
+    ]
   },
-
   "sobre": {
     "eyebrow": "About",
     "fotoAlt": "Inara Kelly do Carmo smiling, wearing hoop earrings, in front of a brick wall",
-    "titulo": { "antes": "Inara Kelly ", "destaque": "do Carmo" },
-    "paragrafos": [
-      "I'm Inara, from Salvador, Bahia, Brazil. My path started in audiovisual production and today it meets strategy. I like to investigate, observe people, understand cultural movements and connect different references to find new possibilities for brands and businesses."
-    ],
+    "titulo": {
+      "antes": "Inara Kelly ",
+      "destaque": "do Carmo"
+    },
+    "paragrafos": [],
     "link": "see my work"
   },
-
-  "marcas": { "titulo": "brands I've walked with" },
-
+  "marcas": {
+    "titulo": "brands I've walked with"
+  },
   "contato": {
     "eyebrow": "contact",
-    "titulo": { "antes": "Shall we build something ", "destaque": "together?" },
+    "titulo": {
+      "antes": "Shall we build something ",
+      "destaque": "together?"
+    },
     "texto": "Good ideas start with encounters, exchanges and curiosity."
   },
-
   "estrategia": {
     "menu": "strategy",
     "intro": {
       "eyebrow": "Work · Strategy",
-      "titulo": { "antes": "Every great strategy starts with ", "destaque": "good research." },
+      "titulo": {
+        "antes": "Every great strategy starts with ",
+        "destaque": "good research."
+      },
       "paragrafos": [
         "More than a professional path, the following projects show how my way of thinking, leading and turning strategy into business results has evolved."
       ]
     },
     "blocos": [
-      { "cliente": "Stone", "titulo": "FAMPE", "texto": "Qualitative research, focus groups and investigation into the reality of women entrepreneurs." },
-      { "cliente": "Stone", "titulo": "Pulso Stone", "texto": "Curation of news, trends and industry movements." },
-      { "cliente": "Old Spice", "titulo": "Body Wash", "texto": "Research on men's habits, culture and behavior around bathing." },
-      { "cliente": "Ford", "titulo": "Agro Curation", "texto": "Curation of opinion leaders and references in agribusiness." },
-      { "cliente": "Centauro", "titulo": "Competitors", "texto": "Mystery shopping and investigation of the shopping experience and store differentiators." }
+      {
+        "cliente": "Stone",
+        "titulo": "FAMPE",
+        "texto": "Strategic direction at Blast to communicate credit to women micro-entrepreneurs, with qualitative research, a survey and a WhatsApp focus group to generate insights for the creative team."
+      },
+      {
+        "cliente": "Stone",
+        "titulo": "Pulso Stone",
+        "texto": "Curation of news, trends and industry movements."
+      },
+      {
+        "cliente": "Old Spice",
+        "titulo": "Body Wash",
+        "texto": "Desk research and social listening on Mexican men's relationship with bathing, leading to the opportunity: Old Spice turns any ordinary shower into a legendary one."
+      },
+      {
+        "cliente": "Ford",
+        "titulo": "Agro Curation",
+        "texto": "Benchmark for curating agribusiness influencers and opinion leaders, in partnership with W+K Argentina, for a brand event."
+      },
+      {
+        "cliente": "Centauro",
+        "titulo": "Competitors",
+        "texto": "I took part in the pitch with mystery shopping: I visited stores, observed touchpoints and talked to staff to map what sets the in-store experience apart."
+      }
     ]
   },
-
   "producao": {
     "menu": "production",
     "intro": {
       "eyebrow": "Work · Audiovisual production",
-      "titulo": { "antes": "From idea ", "destaque": "to reality." },
+      "titulo": {
+        "antes": "From idea ",
+        "destaque": "to reality."
+      },
       "paragrafos": [
         "Before working in strategy, I built my career in audiovisual and event production. That's where I developed my eye for the big picture and the ability to connect people, organize processes and turn ideas into deliverables."
       ]
     },
     "blocos": [
-      { "cliente": "Festival", "titulo": "Feira Preta 2025", "texto": "Production leadership, team, communication and processes." },
-      { "cliente": "Lambão", "titulo": "Lambão Weekend 2025", "texto": "Field production, agility, attention to process and adaptability." }
+      {
+        "cliente": "Audiovisual · 2026",
+        "titulo": "Feira Preta Festival RJ",
+        "texto": "I directed production of the festival's audiovisual coverage in Rio de Janeiro, with a local crew, real-time deliveries and an aftermovie.",
+        "funcao": "Production director",
+        "video": "PWVqcHaKwPE"
+      },
+      {
+        "cliente": "Audiovisual · 2026",
+        "titulo": "Open Bar de Beijo — Banda Eva",
+        "texto": "On-the-ground production at Salvador's Carnival, leading the field operation and real-time logistics.",
+        "funcao": "Production assistant",
+        "video": "9pB3RQ4dnV4"
+      },
+      {
+        "cliente": "Audiovisual · 2025",
+        "titulo": "Lambão Weekend — Psirico",
+        "texto": "Production support for the director of photography during three days of shooting in Itapuã, aligning direction, camera and set.",
+        "funcao": "Production assistant"
+      },
+      {
+        "cliente": "Audiovisual · 2025",
+        "titulo": "Rádio Bahia FM — “Coladinho em Você”",
+        "texto": [
+          "To refresh Rádio Bahia FM's “Tô Ligado” music video, I worked as co-writer and production director, combining my creative expertise with process management.",
+          "In pre-production, I led the research, the briefing and the scriptwriting. During the shoot, my 360º view of planning and logistics kept the project running efficiently, coordinating crews and suppliers to bring the script to life.",
+          "The result was a complete and successful project, showing my skills in strategic planning, management and end-to-end coordination."
+        ],
+        "funcao": "Production lead",
+        "video": "/videos/bahia-fm-coladinho-em-voce.mp4"
+      },
+      {
+        "cliente": "Events · 2025",
+        "titulo": "Feira Preta Festival Salvador",
+        "texto": "I led production of the audiovisual coverage of the festival's first edition in Salvador, with a local crew, real-time deliveries and an aftermovie.",
+        "funcao": "Production lead",
+        "video": "GRio5m2RiwM"
+      },
+      {
+        "cliente": "Events · 2025",
+        "titulo": "World Creativity Day Salvador",
+        "texto": "Co-leadership and communication strategy, connecting teams and logistics across several simultaneous venues.",
+        "funcao": "Communication strategy and leadership"
+      },
+      {
+        "cliente": "Campaigns · 2026",
+        "titulo": "Escola Rambrandt",
+        "texto": "Set production over three shooting days of the school's institutional campaign, supporting the organization of each day and real-time needs.",
+        "funcao": "Production assistant"
+      }
     ]
   }
 }

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
-import { useConteudo } from '../i18n/Lingua'
+import { preencher, useConteudo } from '../i18n/Lingua'
 import { Reveal, TituloSecao } from '../components/ui'
+import Video from '../components/Video'
 import './TrajetoriaPagina.css'
 
 // Página de trajetória reaproveitada por Estratégia e Produção.
@@ -42,7 +43,16 @@ export default function TrajetoriaPagina({ dados }) {
               <h2 className="traj-bloco__titulo">{b.titulo}</h2>
             </div>
             <div className="traj-bloco__corpo">
-              <p className="traj-bloco__texto">{b.texto}</p>
+              {/* "texto" pode ser uma frase só ou uma lista de parágrafos */}
+              {[].concat(b.texto).map((p, j) => <p key={j} className="traj-bloco__texto">{p}</p>)}
+              {b.funcao && (
+                <p className="traj-bloco__funcao">
+                  <span>{ui.trajetoria.funcao}</span> {b.funcao}
+                </p>
+              )}
+              {b.video && (
+                <Video id={b.video} titulo={preencher(ui.trajetoria.video, { titulo: b.titulo })} />
+              )}
               {b.destaques && (
                 <>
                   <p className="traj-bloco__rotulo">{ui.trajetoria.destaques}</p>
