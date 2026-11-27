@@ -15,7 +15,7 @@ export function Destaque({ antes = '', destaque = '', depois = '' }) {
 // Foto real quando `src` existir; senão, espaço reservado com legenda.
 export function Foto({ src, alt, legenda, posicao, className = '' }) {
   if (src) {
-    // Caminhos como '/fotos/x.jpg' ganham a base do site (ex.: /hinara-kelly/fotos/x.jpg)
+    // Caminhos como '/fotos/x.jpg' ganham a base do site (ex.: /fotos/x.jpg)
     const url = /^(https?:)?\/\//.test(src) ? src : import.meta.env.BASE_URL + src.replace(/^\//, '')
     return <img className={`foto ${className}`} src={url} alt={alt} loading="lazy" style={posicao ? { objectPosition: posicao } : undefined} />
   }
